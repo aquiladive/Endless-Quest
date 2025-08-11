@@ -6,7 +6,7 @@ using namespace std;
 
 extern Protag mainchar;
 
-int hp; //for the same thing as in "ADiU"
+int hp;
 int battleCounter[3]; //for factors that affect certain battles
 
 //--
@@ -185,7 +185,8 @@ void battleMechanic(int opponents[]) {
     do {
         if(turn%2==0) {
             //player's turn
-            int invalid=0, damageBonus=1;
+            int invalid=0;
+            double damageBonus=1;
             
             statusCount=statusCheck(Reader.Status, statusCount);
             for(int i=0;i<statusCount;i++) {
@@ -260,7 +261,7 @@ void battleMechanic(int opponents[]) {
             cout<<"\nEnemy turn:"<<endl;
 
             //please remember in the future to add conditions for if the enemy is inflicted by a status
-            //or unite both Reader and Enemy status effects under one function... which was what beyonderEffect was intended to be...
+            //or unite both Reader and Enemy status effects under one function... which was what statusEffect was intended to be...
             for(int i=0;i<enemyCount;i++) {
                 if(Enemy[i].HP<=0) {
                     cout<<Enemy[i].Name<<" has been defeated."<<endl;
