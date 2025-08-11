@@ -21,6 +21,8 @@ extern int initiateBattles();
 extern int saveLoc;
 extern int itemUse(string Item);
 
+extern Protag mainchar;
+
 //--
 //misc functions
 //--
@@ -73,7 +75,6 @@ void openingMenu() {
     cout<<"(insert choice)"<<endl;
     int opchoice, test=1, surety=0;
     string name;
-    Protag mainchar;
 
     cin>>opchoice;
     switch (opchoice) {
@@ -93,7 +94,7 @@ void openingMenu() {
         }
         cout<<"Give your character's name."<<endl;
         cin>>name;
-        mainchar = Protag(name, 25, 5, 5, 5, 5, 5, 5);
+        mainchar.Name = name;
         initiateBattles();
         break;
         
