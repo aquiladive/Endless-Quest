@@ -1,0 +1,11 @@
+v0.0.1
+
+Took the bare bones (particularly the battle aspect) of a text adventure I once made in order to make it a full-on keep fighting forever thing.
+
+Currently done:
+-> Set up the core of the game, with fighting randomly generated enemies.
+
+Things to do:
+-> Make the save function more than decorative text.
+-> Adjust the random battles according to character level.
+-> Allow for character classes and specialisations.
