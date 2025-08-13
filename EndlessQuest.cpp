@@ -1,5 +1,5 @@
 /************************************************************************
- * Endless Quest, v.0.0.1
+ * Endless Quest, v.1.0.0
 
  * (please refer to documentation log for further details)
 
@@ -74,7 +74,7 @@ void openingMenu() {
     cout<<"3) About\t 4) Quit"<<endl;
     cout<<"(insert choice)"<<endl;
     int opchoice, test=1, surety=0;
-    string name;
+    string name, charClass;
 
     cin>>opchoice;
     switch (opchoice) {
@@ -95,6 +95,11 @@ void openingMenu() {
         cout<<"Give your character's name."<<endl;
         cin>>name;
         mainchar.Name = name;
+        cout<<"Give your character's class."<<endl;
+        cout<<"Available choices: Warrior (w), Mage (m), Rogue (r)"<<endl;
+        while(charClass!="w" || charClass!="m" || charClass!="r")
+            cin>>charClass;
+        mainchar.charClass = charClass;
         initiateBattles();
         break;
         
