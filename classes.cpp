@@ -49,11 +49,13 @@ class NPC: public Character {
 class Protag: public Character {
     //using Character::Character;
     public:
+    string charClass;
     Protag () {
 
     }
-    Protag (string n, int a, int b, int x, int y, int z, int i, int j) {
+    Protag (string n, string c, int a, int b, int x, int y, int z, int i, int j) {
         Name=n;
+        charClass=c;
         HP=a;
         MP=b;
         ATK=x;
@@ -148,7 +150,7 @@ class Item {
 
 //--
 
-Protag mainchar("\0",25,5,5,5,5,5,5);
+Protag mainchar("\0","\0",25,5,5,5,5,5,5);
 
 //--
 
