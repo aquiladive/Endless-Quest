@@ -1,5 +1,5 @@
 /************************************************************************
- * Endless Quest, v.1.0.0
+ * Endless Quest, v1.0.0
 
  * (please refer to documentation log for further details)
 
@@ -45,6 +45,16 @@ int chartoint() {
     string ch;
     cin>>ch;
     return ch[0]-'0';
+}
+
+string checkClass(string charClass) {
+    if(charClass == "w" || charClass == "W" || charClass == "warrior" || charClass == "Warrior")
+        return "w";
+    if(charClass == "m" || charClass == "M" || charClass == "mage" || charClass == "Mage")
+        return "m";
+    if(charClass == "r" || charClass == "R" || charClass == "rogue" || charClass == "Rogue")
+        return "r";
+    return "\0";
 }
 
 //--
@@ -97,9 +107,10 @@ void openingMenu() {
         mainchar.Name = name;
         cout<<"Give your character's class."<<endl;
         cout<<"Available choices: Warrior (w), Mage (m), Rogue (r)"<<endl;
-        while(charClass!="w" || charClass!="m" || charClass!="r")
+        while(checkClass(charClass)=="\0")
             cin>>charClass;
-        mainchar.charClass = charClass;
+        mainchar.charClass = checkClass(charClass);
+        mainchar.getAbilities();
         initiateBattles();
         break;
         
