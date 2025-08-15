@@ -6,7 +6,7 @@ using namespace std;
 
 extern Protag mainchar;
 
-int hp;
+int hp; //for the same thing as in "ADiU"
 int battleCounter[3]; //for factors that affect certain battles
 
 //--
@@ -140,7 +140,7 @@ void statAllocation(int statpt) {
 void battleMechanic(int opponents[]) {
     //array opponents should have [0] be number of enemies, followed by each position integer indicating which enemy it is
     int turn=0, statusCount=0;
-    int choice, choice2, attackChoice, itemChoice, damage=0;
+    int choice, skillChoice, attackChoice, itemChoice, damage=0;
     int enemyCount=opponents[0];
     int enemyAttack[2]; //2 to hold choice + damage
     int battleExp=0;
@@ -218,7 +218,7 @@ void battleMechanic(int opponents[]) {
                 battleEnding();
             
             cout<<"\nYour turn:"<<endl;
-            cout<<"Do you:\n1) Attack\n2) Defend\n"<<endl;
+            cout<<"Do you:\n1) Attack\n2) Defend\n3) Use Skill\n"<<endl;
             choice=chartoint();
             switch(choice) {
                 case 1:
@@ -254,6 +254,14 @@ void battleMechanic(int opponents[]) {
                 
                 case 2:
                 break;
+
+
+                case 3:
+                //error: currently it is not printing the skills
+                cout<<"Which skill do you use?"<<endl;
+                cout<<"1) "+Reader.Ability[0]+"\n"<<"2) "+Reader.Ability[1]+"\n"+"3) "+Reader.Ability[2]+"\n";
+                cin>>skillChoice;
+
             } turn++; //end of user turn
         } //end of the first if
 
