@@ -46,10 +46,25 @@ class NPC: public Character {
     }
 };
 
+//--
+
+class Protag;
+void warriorAbilities(Protag& p);
+void mageAbilities(Protag& p);
+void rogueAbilities(Protag& p);
+
+//--
+
 class Protag: public Character {
     //using Character::Character;
     public:
     string charClass;
+    int Level=1;
+    int battleExp=0;
+    int Beyonder[2];
+    string Ability[3];
+    string Class;
+
     Protag () {
 
     }
@@ -64,16 +79,45 @@ class Protag: public Character {
         MDEF=i;
         LUCK=j;
     }
-
-    int Level=1;
-    int battleExp=0;
-    int Beyonder[2];
-    int Ability[3];
-    string Class;
     
     int attack() {
         return ATK;
     }
+
+    void getAbilities() {
+        if(Class=="w")
+            warriorAbilities(*this);
+        if(Class=="m")
+            mageAbilities(*this);
+        if(Class=="r")
+            rogueAbilities(*this);
+    }
+};
+
+//--
+
+void warriorAbilities(Protag& p) {
+    p.Ability[0] = "Focus Strike";
+    if(p.Level > 5)
+        p.Ability[1] = "Meditate";
+    if(p.Level > 10)
+        p.Ability[2] = "Fury Barrage";
+};
+
+void mageAbilities(Protag& p) {
+    p.Ability[0] = "Fireball";
+    if(p.Level > 5)
+        p.Ability[1] = "Light Strike";
+    if(p.Level > 10)
+        p.Ability[2] = "Icicle";
+};
+
+void rogueAbilities(Protag& p) {
+    p.Ability[0] = "Shadow Melt";
+    if(p.Level > 5)
+        p.Ability[1] = "Piercing Gaze";
+    if(p.Level > 10)
+        p.Ability[2] = "Flash Strike";
 };
 
 //--
@@ -126,6 +170,8 @@ class Monster: public Character {
         return damage;
     }
 };
+
+//--
 
 class Item {
     public:
