@@ -6,7 +6,7 @@ using namespace std;
 class Character {
     public:
     int HP, MP, DEF, ATK, MATK, MDEF, LUCK;
-    string Name,Status[4];
+    string Name, Status[4];
     Character() {
         //only Monster array initialisation
     }
@@ -59,11 +59,10 @@ class Protag: public Character {
     //using Character::Character;
     public:
     string charClass;
-    int Level=1;
+    int level=1;
     int battleExp=0;
-    int Beyonder[2];
-    string Ability[3];
-    string Class;
+    string ability[3];
+    int abilityCount;
 
     Protag () {
 
@@ -85,11 +84,11 @@ class Protag: public Character {
     }
 
     void getAbilities() {
-        if(Class=="w")
+        if(charClass=="w")
             warriorAbilities(*this);
-        if(Class=="m")
+        if(charClass=="m")
             mageAbilities(*this);
-        if(Class=="r")
+        if(charClass=="r")
             rogueAbilities(*this);
     }
 };
@@ -97,27 +96,45 @@ class Protag: public Character {
 //--
 
 void warriorAbilities(Protag& p) {
-    p.Ability[0] = "Focus Strike";
-    if(p.Level > 5)
-        p.Ability[1] = "Meditate";
-    if(p.Level > 10)
-        p.Ability[2] = "Fury Barrage";
+    int count = 1;
+    p.ability[0] = "Focus Strike";
+    if(p.level > 5) {
+        p.ability[1] = "Meditate";
+        count++;
+    }
+    if(p.level > 10) {
+        p.ability[2] = "Fury Barrage";
+        count++;
+    }
+    p.abilityCount = count;
 };
 
 void mageAbilities(Protag& p) {
-    p.Ability[0] = "Fireball";
-    if(p.Level > 5)
-        p.Ability[1] = "Light Strike";
-    if(p.Level > 10)
-        p.Ability[2] = "Icicle";
+    int count = 1;
+    p.ability[0] = "Fireball";
+    if(p.level > 5) {
+        p.ability[1] = "Light Strike";
+        count++;
+    }
+    if(p.level > 10) {
+        p.ability[2] = "Icicle";
+        count++;
+    }
+    p.abilityCount = count;
 };
 
 void rogueAbilities(Protag& p) {
-    p.Ability[0] = "Shadow Melt";
-    if(p.Level > 5)
-        p.Ability[1] = "Piercing Gaze";
-    if(p.Level > 10)
-        p.Ability[2] = "Flash Strike";
+    int count = 1;
+    p.ability[0] = "Shadow Melt";
+    if(p.level > 5) {
+        p.ability[1] = "Piercing Gaze";
+        count++;
+    }
+    if(p.level > 10) {
+        p.ability[2] = "Flash Strike";
+        count++;
+    }
+    p.abilityCount = count;
 };
 
 //--
