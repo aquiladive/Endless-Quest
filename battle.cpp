@@ -257,11 +257,17 @@ void battleMechanic(int opponents[]) {
 
 
                 case 3:
-                //error: currently it is not printing the skills
                 cout<<"Which skill do you use?"<<endl;
-                cout<<"1) "+Reader.Ability[0]+"\n"<<"2) "+Reader.Ability[1]+"\n"+"3) "+Reader.Ability[2]+"\n";
+                cout<<"1) "+Reader.ability[0]+"\n"<<"2) "+Reader.ability[1]+"\n"+"3) "+Reader.ability[2]+"\n";
                 cin>>skillChoice;
-
+                if (skillChoice <= Reader.abilityCount) {
+                    //to be done
+                }
+                else {
+                    cout<<"Invalid choice."<<endl;
+                    invalid=1;
+                    turn++;
+                }
             } turn++; //end of user turn
         } //end of the first if
 
