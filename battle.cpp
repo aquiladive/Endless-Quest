@@ -6,7 +6,7 @@ using namespace std;
 
 extern Protag mainchar;
 
-int hp; //for the same thing as in "ADiU"
+int hp;
 int battleCounter[3]; //for factors that affect certain battles
 
 //--
@@ -67,14 +67,14 @@ void levelUp(int battleExp) {
     //this only holds good for if the MC can level up only once by battle EXP
     //ie battles should not provide EXP that will boost level multiple times
     int initialExp=0, expReq=20;
-    for(int i=1;i<mainchar.Level;i++) {
+    for(int i=1;i<mainchar.level;i++) {
         expReq+=i*5;
     }
     if(battleExp>=expReq) {
-        mainchar.Level+=1;
+        mainchar.level+=1;
         mainchar.battleExp-=expReq;
-        cout<<"You have levelled up to Lv."<<mainchar.Level<<"."<<endl;
-        if(mainchar.Level==2)
+        cout<<"You have levelled up to Lv."<<mainchar.level<<"."<<endl;
+        if(mainchar.level==2)
             Tutorial2();
         statAllocation(5);
     }
@@ -137,51 +137,80 @@ void statAllocation(int statpt) {
     }
 }
 
-void battleMechanic(int opponents[]) {
-    //array opponents should have [0] be number of enemies, followed by each position integer indicating which enemy it is
-    int turn=0, statusCount=0;
-    int choice, skillChoice, attackChoice, itemChoice, damage=0;
-    int enemyCount=opponents[0];
-    int enemyAttack[2]; //2 to hold choice + damage
-    int battleExp=0;
-    Monster Enemy[opponents[0]];
-    Protag Reader=mainchar; //so that stat/status changes in battle don't affect overworld mainchar
-    if(battleCounter[0]==1)
-        Reader.HP=3*Reader.HP/4;
-    
+//--
+
+void initialiseOpponents(int opponents[], Monster Enemy[], int battleExp) {
     for(int i=0;i<opponents[0];i++) {
         switch(opponents[i+1]) {
             case 1:
-            Bounceshroom.mattack1="Spore";
-            Bounceshroom.mattack1effect="DEF Down 1";
-            Bounceshroom.mattack2="Bounce";
-            Bounceshroom.mattack2effect="None";
-            Bounceshroom.exppoint=10;
             battleExp+=10;
             Enemy[i]=Bounceshroom;
             break;
             
             case 2:
-            DarkWolf.mattack1="Shadow Claw";
-            DarkWolf.mattack1effect="None";
-            DarkWolf.mattack2="Restrain";
-            DarkWolf.mattack2effect="Trapped 1";
-            DarkWolf.exppoint=15;
             battleExp+=15;
             Enemy[i]=DarkWolf;
             break;
 
             case 3:
-            Slime.mattack1="Acid";
-            Slime.mattack1effect="DEF Down 1";
-            Slime.mattack2="Ooze Trap";
-            Slime.mattack2effect="Trapped 1";
             battleExp+=10;
             Enemy[i]=Slime;
             break;
         }
     }
-    
+}
+
+//--
+
+void attackOpponent(Monster Enemy[], Protag Reader, int attackType, double damageBonus, int& enemyCount, int& invalid, int& turn) {
+    int attackChoice, damage;
+
+    cout<<"Which enemy do you attack?"<<endl;
+    for(int i=1;i<=enemyCount;i++) {
+        cout<<i<<") "<<Enemy[i-1].Name<<endl;
+    }
+    attackChoice=chartoint();
+    if(attackChoice>0 && attackChoice<=enemyCount) {
+        attackChoice--;
+        if(attackType==0)
+            damage=Reader.attack()*damageBonus-Enemy[attackChoice].DEF;
+        else if(attackType==1)
+            damage=Reader.magicAttack()*damageBonus-Enemy[attackChoice].MDEF;
+        if(damage<=0)
+            damage=1;
+        cout<<Reader.Name<<" deals "<<damage<<" damage."<<endl;
+        Enemy[attackChoice].HP=Enemy[attackChoice].HP-damage;
+        if(Enemy[attackChoice].HP<=0) {
+            cout<<Enemy[attackChoice].Name<<" has been defeated."<<endl;
+            enemyCount--;
+            for(int i=attackChoice;i<enemyCount;i++) {
+                Enemy[i]=Enemy[i+1];
+            }
+        }
+        else
+            cout<<Enemy[attackChoice].Name<<" has "<<Enemy[attackChoice].HP<<" health remaining."<<endl;
+        }
+    else {
+        cout<<"Invalid choice."<<endl;
+        invalid=1;
+        turn++;
+    }
+}
+
+//--
+
+void battleMechanic(int opponents[]) {
+    //array opponents should have [0] be number of enemies, followed by each position integer indicating which enemy it is
+    int turn=0, statusCount=0;
+    int choice, skillChoice, attackChoice, attackType, itemChoice, damage=0;
+    int enemyCount=opponents[0];
+    int enemyAttack[2]; //2 to hold choice + damage
+    int battleExp=0;
+    Monster Enemy[opponents[0]];
+    Protag Reader=mainchar; //so that stat/status changes in battle don't affect overworld mainchar
+
+    initialiseOpponents(opponents, Enemy, battleExp);
+
     do {
         if(turn%2==0) {
             //player's turn
@@ -222,33 +251,8 @@ void battleMechanic(int opponents[]) {
             choice=chartoint();
             switch(choice) {
                 case 1:
-                cout<<"Which enemy do you attack?"<<endl;
-                for(int i=1;i<=enemyCount;i++) {
-                    cout<<i<<") "<<Enemy[i-1].Name<<endl;
-                }
-                attackChoice=chartoint();
-                if(attackChoice>0 && attackChoice<=enemyCount) {
-                    attackChoice--;
-                    damage=Reader.attack()*damageBonus-Enemy[attackChoice].DEF;
-                    if(damage<=0)
-                        damage=1;
-                    cout<<Reader.Name<<" deals "<<damage<<" damage."<<endl;
-                    Enemy[attackChoice].HP=Enemy[attackChoice].HP-damage;
-                    if(Enemy[attackChoice].HP<=0) {
-                        cout<<Enemy[attackChoice].Name<<" has been defeated."<<endl;
-                        enemyCount--;
-                        for(int i=attackChoice;i<enemyCount;i++) {
-                            Enemy[i]=Enemy[i+1];
-                        }
-                    }
-                    else
-                        cout<<Enemy[attackChoice].Name<<" has "<<Enemy[attackChoice].HP<<" health remaining."<<endl;
-                }
-                else {
-                    cout<<"Invalid choice."<<endl;
-                    invalid=1;
-                    turn++;
-                }
+                attackType=0;
+                attackOpponent(Enemy, Reader, attackType, damageBonus, enemyCount, invalid, turn);
                 break;
                 
                 
@@ -258,10 +262,19 @@ void battleMechanic(int opponents[]) {
 
                 case 3:
                 cout<<"Which skill do you use?"<<endl;
-                cout<<"1) "+Reader.ability[0]+"\n"<<"2) "+Reader.ability[1]+"\n"+"3) "+Reader.ability[2]+"\n";
-                cin>>skillChoice;
+                cout<<"1) "<<Reader.ability[0].name<<"\n"<<"2) "<<Reader.ability[1].name<<"\n"<<"3) "<<Reader.ability[2].name<<"\n";
+                skillChoice=chartoint();
+                //to be done
+                //error: though the skillChoice and abilityCount values are 1 as they should be, the if block isn't triggering
                 if (skillChoice <= Reader.abilityCount) {
-                    //to be done
+                    skill chosenSkill = Reader.ability[skillChoice];
+                    if(chosenSkill.type=="Attack 1") {
+                        if(chosenSkill.statModifier[0]==3)
+                            attackType=0;
+                        else if(chosenSkill.statModifier[0]==5)
+                            attackType=1;
+                        attackOpponent(Enemy, Reader, attackType, damageBonus, enemyCount, invalid, turn);
+                    }
                 }
                 else {
                     cout<<"Invalid choice."<<endl;
