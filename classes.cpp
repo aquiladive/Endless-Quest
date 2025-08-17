@@ -1,7 +1,14 @@
 #include <iostream>
 #include <ctime>
 #include <cstdlib> //ctime and cstdlib used for the srand(time(0)) and rand())
+#include "skillCompendium.cpp"
 using namespace std;
+
+//--
+
+extern skill w1, w2, w3, m1, m2, m3, r1, r2, r3;
+
+//--
 
 class Character {
     public:
@@ -61,7 +68,7 @@ class Protag: public Character {
     string charClass;
     int level=1;
     int battleExp=0;
-    string ability[3];
+    skill ability[3];
     int abilityCount;
 
     Protag () {
@@ -83,6 +90,10 @@ class Protag: public Character {
         return ATK;
     }
 
+    int magicAttack() {
+        return MATK;
+    }
+
     void getAbilities() {
         if(charClass=="w")
             warriorAbilities(*this);
@@ -97,13 +108,13 @@ class Protag: public Character {
 
 void warriorAbilities(Protag& p) {
     int count = 1;
-    p.ability[0] = "Focus Strike";
+    p.ability[0] = w1;
     if(p.level > 5) {
-        p.ability[1] = "Meditate";
+        p.ability[1] = w2;
         count++;
     }
     if(p.level > 10) {
-        p.ability[2] = "Fury Barrage";
+        p.ability[2] = w3;
         count++;
     }
     p.abilityCount = count;
@@ -111,13 +122,13 @@ void warriorAbilities(Protag& p) {
 
 void mageAbilities(Protag& p) {
     int count = 1;
-    p.ability[0] = "Fireball";
+    p.ability[0] = m1;
     if(p.level > 5) {
-        p.ability[1] = "Light Strike";
+        p.ability[1] = m2;
         count++;
     }
     if(p.level > 10) {
-        p.ability[2] = "Icicle";
+        p.ability[2] = m3;
         count++;
     }
     p.abilityCount = count;
@@ -125,13 +136,13 @@ void mageAbilities(Protag& p) {
 
 void rogueAbilities(Protag& p) {
     int count = 1;
-    p.ability[0] = "Shadow Melt";
+    p.ability[0] = r1;
     if(p.level > 5) {
-        p.ability[1] = "Piercing Gaze";
+        p.ability[1] = r2;
         count++;
     }
     if(p.level > 10) {
-        p.ability[2] = "Flash Strike";
+        p.ability[2] = r3;
         count++;
     }
     p.abilityCount = count;
@@ -162,6 +173,14 @@ class Monster: public Character {
     string mattack2="\0", mattack2effect="\0";
     int exppoint=0;
     //all new public members are initialised to null as they are properly initialised in battleMechanic()
+
+    void setValues(string ma1, string mae1, string ma2, string mae2, int exp) {
+        mattack1 = ma1;
+        mattack1effect = mae1;
+        mattack2 = ma2;
+        mattack2effect = mae2;
+        exppoint = exp;
+    }
     
     int attack() {
         int choice, damage=0;
@@ -218,8 +237,17 @@ Protag mainchar("\0","\0",25,5,5,5,5,5,5);
 //--
 
 Monster Bounceshroom("Bounceshroom",6,0,9,1,10,5,0);
+
 Monster Slime("Slime",10,0,7,2,8,6,0);
+
 Monster DarkWolf("Dark Wolf",12,0,15,1,10,3,2);
+
 Monster MetalCube("Metal Cube",10,0,8,10,6,10,0);
 
 //--
+
+void finaliseMonsters() {
+    Bounceshroom.setValues("Spore", "DEF Down 1", "Bounce", "None", 10);
+    Slime.setValues("Acid", "DEF Down 1", "Ooze Trap", "Trapped 1", 10);
+    DarkWolf.setValues("Shadow Claw", "None", "Restrain", "Trapped 1", 15);
+}
