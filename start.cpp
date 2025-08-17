@@ -6,15 +6,18 @@ using namespace std;
 
 void battleMechanic(int opponents[]);
 
-extern void statAllocation(int statpt);
-
 extern Protag mainchar;
+
+extern void finaliseMonsters();
 
 //--
 
 
 int initiateBattles() {
     int testchoice, n;
+    
+    finaliseMonsters();
+
     cout<<"The endless battles have begun."<<endl;
     while(true) {
         srand(time(0));
