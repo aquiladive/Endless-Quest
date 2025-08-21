@@ -14,7 +14,7 @@ extern void finaliseMonsters();
 
 
 int initiateBattles() {
-    int testchoice, n;
+    int battleCount=0;
     
     finaliseMonsters();
 
@@ -28,5 +28,7 @@ int initiateBattles() {
         for(int i=1;i<number+1;i++)
             opponents[i]=rand()%3+1;
         battleMechanic(opponents);
+        battleCount++;
+        cout<<"You have emerged victorious, but the battles never cease."<<endl;
     }
 }
