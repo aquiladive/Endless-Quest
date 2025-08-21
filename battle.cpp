@@ -6,7 +6,7 @@ using namespace std;
 
 extern Protag mainchar;
 
-int hp;
+int hp; //for the same thing as in "ADiU"
 int battleCounter[3]; //for factors that affect certain battles
 
 //--
@@ -197,6 +197,24 @@ void attackOpponent(Monster Enemy[], Protag Reader, int attackType, double damag
     }
 }
 
+void skillSwitch(skill chosenSkill, Monster Enemy[], Protag Reader, int attackType, double damageBonus, int& enemyCount, int& invalid, int& turn) {
+    if(chosenSkill.type=="Attack 1") {
+        if(chosenSkill.statModifier[0]==3)
+            attackType=0;
+        else if(chosenSkill.statModifier[0]==5)
+            attackType=1;
+        damageBonus = chosenSkill.statModifier[1];
+        //add MP cost for every skill
+        attackOpponent(Enemy, Reader, attackType, damageBonus, enemyCount, invalid, turn);
+    }
+    else if(chosenSkill.type=="Heal") {
+        if(chosenSkill.effect=="Recover 1") {
+            Reader.HP += 10;
+            cout<<"You feel a renewed energy in your tired bones."<<endl;
+        }
+    }
+}
+
 //--
 
 void battleMechanic(int opponents[]) {
@@ -262,19 +280,12 @@ void battleMechanic(int opponents[]) {
 
                 case 3:
                 cout<<"Which skill do you use?"<<endl;
-                cout<<"1) "<<Reader.ability[0].name<<"\n"<<"2) "<<Reader.ability[1].name<<"\n"<<"3) "<<Reader.ability[2].name<<"\n";
+                for(int i = 0; i < Reader.abilityCount; i++)
+                    cout<<(i+1)<<") "<<Reader.ability[i].name<<": "<<Reader.ability[i].description<<"\n";
                 skillChoice=chartoint();
                 //to be done
-                //error: though the skillChoice and abilityCount values are 1 as they should be, the if block isn't triggering
                 if (skillChoice <= Reader.abilityCount) {
-                    skill chosenSkill = Reader.ability[skillChoice];
-                    if(chosenSkill.type=="Attack 1") {
-                        if(chosenSkill.statModifier[0]==3)
-                            attackType=0;
-                        else if(chosenSkill.statModifier[0]==5)
-                            attackType=1;
-                        attackOpponent(Enemy, Reader, attackType, damageBonus, enemyCount, invalid, turn);
-                    }
+                    skillSwitch(Reader.ability[skillChoice-1], Enemy, Reader, attackType, damageBonus, enemyCount, invalid, turn);
                 }
                 else {
                     cout<<"Invalid choice."<<endl;
