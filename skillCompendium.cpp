@@ -13,7 +13,7 @@ struct skill {
 //list of skill effects: Recover, Blind, Freeze
 
 skill w1 = {"Force Strike", "Attack 1", "", {3, 1.5}, "A powerful attack that draws on your inner strength."};
-skill w2 = {"Meditate", "Heal", "Recover", {0, 0}, "You find your core of strength and draw on it to better heal your wounds."};
+skill w2 = {"Meditate", "Heal", "Recover 1", {0, 0}, "You find your core of strength and draw on it to better heal your wounds."};
 skill w3 = {"Fury Barrage", "Attack1", "", {3, 2}, ""};
 
 skill m1 = {"Fireball", "Attack 1", "", {5, 1.5}, "A classic in every mage's repertoire."};
