@@ -197,6 +197,28 @@ void attackOpponent(Monster Enemy[], Protag Reader, int attackType, double damag
     }
 }
 
+void attackAll(Monster Enemy[], Protag Reader, int attackType, double damageBonus, int& enemyCount) {
+    int damage;
+    for(int i = 1; i <= enemyCount; i++) {
+        if(attackType==0)
+            damage=Reader.attack()*damageBonus-Enemy[i].DEF;
+        else if(attackType==1)
+            damage=Reader.magicAttack()*damageBonus-Enemy[i].MDEF;
+        if(damage<=0)
+            damage=1;
+
+        cout<<Reader.Name<<" deals "<<damage<<" damage."<<endl;
+
+        if(Enemy[i].HP<=0) {
+            cout<<Enemy[i].Name<<" has been defeated."<<endl;
+            enemyCount--;
+            Enemy[i]=Enemy[i+1];
+        }
+        else
+            cout<<Enemy[i].Name<<" has "<<Enemy[i].HP<<" health remaining."<<endl;
+    }
+}
+
 void skillSwitch(skill chosenSkill, Monster Enemy[], Protag Reader, int attackType, double damageBonus, int& enemyCount, int& invalid, int& turn) {
     if(chosenSkill.type=="Attack 1") {
         if(chosenSkill.statModifier[0]==3)
@@ -206,6 +228,13 @@ void skillSwitch(skill chosenSkill, Monster Enemy[], Protag Reader, int attackTy
         damageBonus = chosenSkill.statModifier[1];
         //add MP cost for every skill
         attackOpponent(Enemy, Reader, attackType, damageBonus, enemyCount, invalid, turn);
+    }
+    else if(chosenSkill.type=="Attack All") {
+        if(chosenSkill.statModifier[0]==3)
+            attackType=0;
+        else if(chosenSkill.statModifier[0]==5)
+            attackType=1;
+        damageBonus = chosenSkill.statModifier[1];
     }
     else if(chosenSkill.type=="Heal") {
         if(chosenSkill.effect=="Recover 1") {
