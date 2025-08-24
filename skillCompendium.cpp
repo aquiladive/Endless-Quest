@@ -19,8 +19,10 @@ skill w3 = {"Fury Barrage", "Attack 1", 10, "", {3, 2}, "Your fast but fierce at
 
 skill m1 = {"Fireball", "Attack 1", 5, "", {5, 1.5}, "A classic in every mage's repertoire."};
 skill m2 = {"Light Strike", "Attack 1", 8, "Blind", {5, 1.5}, "You cradle light in your hands and target your opponent."};
-skill m3 = {"Icicle", "Attack 1", 10, "Freeze", {5, 1.5}, "The water in the air crystallises and sharp icy daggers fly at your opponent."};
+skill m3 = {"Icicle", "Attack 1", 8, "Freeze", {5, 1.5}, "The water in the air crystallises and sharp icy daggers fly at your opponent."};
+skill ma1 = {"Tidal Wave", "Attack All", 12, "", {5, 1.5}, "The water around you gathers and flows at your enemies as one unstoppable force."};
+skill mb1 = {"Arise, Ifrit", "Summon", 20, "", {0, 0}, "The grand fire demon, Ifrit, is brought forth from its dimension to accompany you."};
 
 skill r1 = {"Shadow Melt", "Defense", 5, "", {0, 0}, "Cradled by the shadows, nothing can find you."};
 skill r2 = {"Piercing Gaze", "Boost", 8, "", {3, 2}, "With your sharp eyes, you discover weaknesses."};
-skill r3 = {"Flash Strike", "Attack 1", 10, "Blind", {3, 1.5}, "Your strikes are barely visible as you dart in and out."};
+skill r3 = {"Flash Strike", "Attack 1", 8, "Blind", {3, 1.5}, "Your strikes are barely visible as you dart in and out."};
