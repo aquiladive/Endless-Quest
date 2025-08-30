@@ -235,7 +235,7 @@ void skillSwitch(skill chosenSkill, Monster Enemy[], Protag Reader, int attackTy
         else if(chosenSkill.statModifier[0]==5)
             attackType=1;
         damageBonus = chosenSkill.statModifier[1];
-        attackAll(Enemy[], Reader, attackType, damageBonus, enemyCount);
+        attackAll(Enemy, Reader, attackType, damageBonus, enemyCount);
     }
     else if(chosenSkill.type=="Heal") {
         if(chosenSkill.effect=="Recover 1") {
