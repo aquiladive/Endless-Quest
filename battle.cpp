@@ -243,6 +243,10 @@ void skillSwitch(skill chosenSkill, Monster Enemy[], Protag Reader, int attackTy
             cout<<"You feel a renewed energy in your tired bones."<<endl;
         }
     }
+    else if(chosenSkill.type=="Summon") {
+        battleCounter[0]=1;
+        //set battleCounter[1] to an integer value according to the being that is summoned
+    }
 }
 
 //--
