@@ -60,8 +60,8 @@ void townGladius() {
     cout<<"Illusions such as these cannot fully capture the experience of fighting actual monsters, but your family will not let you venture beyond Gladius solely to sate your need for realism. Especially not when you haven't reached adulthood."<<endl;
     cout<<"Now that you've finally accomplished that last week, they can no longer stop you. You need only wait for the right opportunity."<<endl;
     cout<<"\""<<mainchar.Name<<"!"<<endl;
-    cin>>pause;
     cout<<"The shout catches you by surprise and you whirl around, weapon already held at the ready--"<<endl;
+    cin>>pause;
     cout<<"--But it's only Solia, your childhood friend."<<endl;
     cout<<"\"Whoa! Relax,\" she says, hands held out in front of her."<<endl;
     cout<<"\"Sorry, I only finished training. What's the matter?\""<<endl;
@@ -81,6 +81,9 @@ void townGladius() {
 }
 
 void forestsBeyond() {
+    string pause;
     //to be done
     cout<<"You haven't been to the forest before, but you're familiar with them through the many tales."<<endl;
+    cout<<"You are part of a team of six. It is too little to walk into the Aragin Forest, and yet it is too much to assign to a quest of the farmers' union."<<endl;
+    cout<<"It's the pay, you believe. You hadn't expected the union could scrounge up that much, but clearly the gravity of the issue had surpassed such matters."<<endl;
 }
