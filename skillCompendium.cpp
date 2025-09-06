@@ -10,9 +10,10 @@ struct skill {
     string description;
 };
 
-//list of skill types: Attack 1, Attack All, Heal, Defense, Boost (1, 2), Counter, Summon
+//list of skill types: Attack 1, Attack All, Heal, Defense, Boost (1, 2), Counter, Summon, Drain
 //list of skill effects: Recover, Blind, Freeze
-//current idea for class progression: Warrior to either Paladin or Berserker, Mage to either Elementalist or Guardian (summons, large scale boosts)
+//current idea for class progression: Warrior to either Paladin or Berserker, Mage to either Elementalist or Guardian (summons, large scale boosts), Rogue to either Sacrificer or Assassin
+//one path is "light/good" and one is "dark/evil"
 
 skill w1 = {"Force Strike", "Attack 1", 5, "", {3, 1.5}, "A powerful attack that draws on your inner strength."};
 skill w2 = {"Meditate", "Heal", 8, "Recover 1", {0, 0}, "You find your core of strength and draw on it to better heal your wounds."};
@@ -29,3 +30,5 @@ skill mb1 = {"Arise, Ifrit", "Summon", 20, "", {0, 0}, "The grand fire demon, If
 skill r1 = {"Shadow Melt", "Defense", 5, "", {0, 0}, "Cradled by the shadows, nothing can find you."};
 skill r2 = {"Piercing Gaze", "Boost 1", 8, "", {3, 2}, "With your sharp eyes, you discover weaknesses."};
 skill r3 = {"Flash Strike", "Attack 1", 8, "Blind", {3, 1.5}, "Your strikes are barely visible as you dart in and out."};
+skill ra1 = {"Bloodletting", "Boost 2", 8, "", {3, 2}, "You give up some of your blood to the gods to gain their righteous force."};
+skill rb1 = {"Life Steal", "Drain", 10, "", {3, 1.5}, "Your blade cuts your opponent and their life force is drawn to you."};
