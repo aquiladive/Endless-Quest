@@ -8,6 +8,7 @@ extern Protag mainchar;
 
 int hp; //for the same thing as in "ADiU"
 int battleCounter[3]; //for factors that affect certain battles
+int globalDamage; //inelegant solution for the drain issue, fix it later
 
 //--
 
@@ -178,6 +179,7 @@ void attackOpponent(Monster Enemy[], Protag Reader, int attackType, double damag
             damage=Reader.magicAttack()*damageBonus-Enemy[attackChoice].MDEF;
         if(damage<=0)
             damage=1;
+        globalDamage = damage;
         cout<<Reader.Name<<" deals "<<damage<<" damage."<<endl;
         Enemy[attackChoice].HP=Enemy[attackChoice].HP-damage;
         if(Enemy[attackChoice].HP<=0) {
@@ -246,6 +248,17 @@ void skillSwitch(skill chosenSkill, Monster Enemy[], Protag Reader, int attackTy
     else if(chosenSkill.type=="Summon") {
         battleCounter[0]=1;
         //set battleCounter[1] to an integer value according to the being that is summoned
+    }
+    else if(chosenSkill.type=="Drain") {
+        if(chosenSkill.statModifier[0]==3)
+            attackType=0;
+        else if(chosenSkill.statModifier[0]==5)
+            attackType=1;
+        damageBonus = chosenSkill.statModifier[1];
+        attackOpponent(Enemy, Reader, attackType, damageBonus, enemyCount, invalid, turn);
+        int heal = globalDamage/2;
+        cout<<"You have healed "<< heal << " points of HP."<<endl;
+        Reader.HP += heal;
     }
 }
 
