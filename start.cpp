@@ -86,4 +86,9 @@ void forestsBeyond() {
     cout<<"You haven't been to the forest before, but you're familiar with them through the many tales."<<endl;
     cout<<"You are part of a team of six. It is too little to walk into the Aragin Forest, and yet it is too much to assign to a quest of the farmers' union."<<endl;
     cout<<"It's the pay, you believe. You hadn't expected the union could scrounge up that much, but clearly the gravity of the issue had surpassed such matters."<<endl;
+    cout<<"You're passingly familiarly with most people in the team, with all of you being from Gladius... except for one."<<endl;
+    cin>>pause;
+    cout<<"Verun, he calls himself."<<endl;
+    cout<<"He's dressed in a muted gray, a hood pulled up though it doesn't hide his ageless face from view, and carrying a massive longbow on his back. It's large enough you're not certain any of you could lift it, let alone fire with it."<<endl;
+    cout<<"He isn't the silent type, despite appearances. He does add to the conversation, but he drifts in and out of it at will and answers nothing about himself."<<endl;
 }
