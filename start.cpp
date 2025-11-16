@@ -25,9 +25,12 @@ int initiateBattles() {
 
     cout<<"The endless battles have begun."<<endl;
     while(true) {
+        int number = 0;
         srand(time(0));
-        int number=rand()%4+1;
-        int opponents[number+1];
+        if(mainchar.level < 5)
+            number = rand() % 2 + 1;
+        else
+            number = rand() % 4 + 1;
     
         opponents[0]=number;
         for(int i=1;i<number+1;i++)
