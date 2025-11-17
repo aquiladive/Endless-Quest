@@ -240,6 +240,8 @@ Monster Bounceshroom("Bounceshroom",6,0,9,1,10,5,0);
 
 Monster Slime("Slime",10,0,7,2,8,6,0);
 
+Monster FangedPup("Fanged Pup",10,0,8,1,5,3,2);
+
 Monster DarkWolf("Dark Wolf",12,0,15,1,10,3,2);
 
 Monster MetalCube("Metal Cube",10,0,8,10,6,10,0);
