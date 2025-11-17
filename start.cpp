@@ -32,12 +32,12 @@ int initiateBattles() {
         else
             number = rand() % 4 + 1;
     
-        opponents[0]=number;
-        for(int i=1;i<number+1;i++)
-            opponents[i]=rand()%3+1;
+        opponents[0] = number;
+        for(int i = 1; i < number + 1; i++)
+            opponents[i] = rand() % 3 + 1;
         battleMechanic(opponents);
         battleCount++;
-        if(battleCount%3 == 1) {
+        if(battleCount % 3 == 1) {
             plotCall(battleCount);
         }
         else
@@ -83,7 +83,7 @@ void townGladius() {
     cout<<"You have a union to find, and a quest to volunteer yourself for."<<endl;
 }
 
-void forestsBeyond() {
+void forestsBeyond_pt1() {
     string pause;
     //to be done
     cout<<"You haven't been to the forest before, but you're familiar with them through the many tales."<<endl;
@@ -94,4 +94,5 @@ void forestsBeyond() {
     cout<<"Verun, he calls himself."<<endl;
     cout<<"He's dressed in a muted gray, a hood pulled up though it doesn't hide his ageless face from view, and carrying a massive longbow on his back. It's large enough you're not certain any of you could lift it, let alone fire with it."<<endl;
     cout<<"He isn't the silent type, despite appearances. He does add to the conversation, but he drifts in and out of it at will and answers nothing about himself."<<endl;
+    cout<<"That mystery feels like there's something important about him, but you choose to ignore him -- there's no use taking a horse to water if it won't drink, as a saying in your town goes.<<endl;
 }
