@@ -244,6 +244,8 @@ Monster FangedPup("Fanged Pup",10,0,8,1,5,3,2);
 
 Monster DarkWolf("Dark Wolf",12,0,15,1,10,3,2);
 
+Monster PoisonPetals("Poison Petals",15,0,5,0,8,4,0);
+
 Monster MetalCube("Metal Cube",10,0,8,10,6,10,0);
 
 //--
@@ -252,4 +254,5 @@ void finaliseMonsters() {
     Bounceshroom.setValues("Spore", "DEF Down 1", "Bounce", "None", 10);
     Slime.setValues("Acid", "DEF Down 1", "Ooze Trap", "Trapped 1", 10);
     DarkWolf.setValues("Shadow Claw", "None", "Restrain", "Trapped 1", 15);
+    PoisonPetals.setValues("Acid", "DEF Down 1", "Ooze Trap", "Trapped 1", 10);
 }
