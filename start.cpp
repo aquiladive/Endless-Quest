@@ -49,7 +49,9 @@ void plotCall(int battleCount) {
     switch(battleCount) {
         case 1: townGladius();
         break;
-        case 4: forestsBeyond();
+        case 4: forestsBeyond_pt1();
+        break;
+        case 7: forestsBeyond_pt2();
         break;
     }
 }
@@ -85,7 +87,7 @@ void townGladius() {
 
 void forestsBeyond_pt1() {
     string pause;
-    //to be done
+
     cout<<"You haven't been to the forest before, but you're familiar with them through the many tales."<<endl;
     cout<<"You are part of a team of six. It is too little to walk into the Aragin Forest, and yet it is too much to assign to a quest of the farmers' union."<<endl;
     cout<<"It's the pay, you believe. You hadn't expected the union could scrounge up that much, but clearly the gravity of the issue had surpassed such matters."<<endl;
@@ -94,5 +96,14 @@ void forestsBeyond_pt1() {
     cout<<"Verun, he calls himself."<<endl;
     cout<<"He's dressed in a muted gray, a hood pulled up though it doesn't hide his ageless face from view, and carrying a massive longbow on his back. It's large enough you're not certain any of you could lift it, let alone fire with it."<<endl;
     cout<<"He isn't the silent type, despite appearances. He does add to the conversation, but he drifts in and out of it at will and answers nothing about himself."<<endl;
-    cout<<"That mystery feels like there's something important about him, but you choose to ignore him -- there's no use taking a horse to water if it won't drink, as a saying in your town goes.<<endl;
+    cout<<"That mystery makes it feel like there's something important about him, but you choose to ignore him -- there's no use taking a horse to water if it won't drink, as a saying in your town goes."<<endl;
+    cin>>pause;
+    cout<<"Any way, the attention of the group sharpens as you all go deeper in and the denizens of the forest emerge..."<<endl;
+}
+
+void forestsBeyond_pt2() {
+    string pause;
+    //to be done
+    cout<<"Wolves with fur as if stolen from the night, poisonous flora that wait for you to lower your guard before it comes to life...."<<endl;
+    cout<<"There's no end to the parade of viciousness."<<endl;
 }
