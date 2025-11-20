@@ -172,7 +172,7 @@ class Monster: public Character {
     string mattack1="\0", mattack1effect="\0";
     string mattack2="\0", mattack2effect="\0";
     int exppoint=0;
-    //all new public members are initialised to null as they are properly initialised in battleMechanic()
+    //all new public members are initialised to null as they are properly initialised in finaliseMonsters()
 
     void setValues(string ma1, string mae1, string ma2, string mae2, int exp) {
         mattack1 = ma1;
@@ -240,13 +240,17 @@ Monster Bounceshroom("Bounceshroom",6,0,9,1,10,5,0);
 
 Monster Slime("Slime",10,0,7,2,8,6,0);
 
-Monster FangedPup("Fanged Pup",10,0,8,1,5,3,2);
+Monster FangedPuppy("Fanged Puppy",8,0,10,0,5,1,2);
 
 Monster DarkWolf("Dark Wolf",12,0,15,1,10,3,2);
 
-Monster PoisonPetals("Poison Petals",15,0,5,0,8,4,0);
+Monster PoisonPetals("Poison Petals",8,0,10,3,10,5,0);
+
+Monster Saberhawk("Saberhawk",10,0,12,0,6,0,0);
 
 Monster MetalCube("Metal Cube",10,0,8,10,6,10,0);
+
+Monster CloakedKnell("Cloaked Knell",20,0,20,10,10,15,0);
 
 //--
 
@@ -254,5 +258,5 @@ void finaliseMonsters() {
     Bounceshroom.setValues("Spore", "DEF Down 1", "Bounce", "None", 10);
     Slime.setValues("Acid", "DEF Down 1", "Ooze Trap", "Trapped 1", 10);
     DarkWolf.setValues("Shadow Claw", "None", "Restrain", "Trapped 1", 15);
-    PoisonPetals.setValues("Acid", "DEF Down 1", "Ooze Trap", "Trapped 1", 10);
+    PoisonPetals.setValues("Acid", "DEF Down 1", "Lash", "None", 15);
 }
