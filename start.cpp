@@ -12,7 +12,7 @@ extern void finaliseMonsters();
 
 //--
 
-void townGladius(), forestsBeyond();
+void townGladius(), forestsBeyond_pt1(), forestsBeyond_pt2();
 void plotCall(int battleCount);
 
 //--
@@ -32,9 +32,16 @@ int initiateBattles() {
         else
             number = rand() % 4 + 1;
     
+        int opponents[number+1];
         opponents[0] = number;
+        
+        int opponentRange = 0;
+        if(battleCount < 4)
+            opponentRange = 3;
+        else if(battleCount < 10)
+            opponentRange = 6;
         for(int i = 1; i < number + 1; i++)
-            opponents[i] = rand() % 3 + 1;
+            opponents[i] = rand() % opponentRange + 1;
         battleMechanic(opponents);
         battleCount++;
         if(battleCount % 3 == 1) {
@@ -83,6 +90,8 @@ void townGladius() {
     cout<<"\"This is the first step towards what I want. Whatever happens, I won't regret it. Don't regret it for me\", you tell her softly."<<endl;
     cout<<"Only after you feel her nod do you let go and leave the grounds."<<endl;
     cout<<"You have a union to find, and a quest to volunteer yourself for."<<endl;
+    cin>>pause;
+    cout<<"As you make your way to the union, you clear up some of the lesser monsters in the vicinity..."<<endl;
 }
 
 void forestsBeyond_pt1() {
