@@ -20,6 +20,7 @@ skill w2 = {"Meditate", "Heal", 8, "Recover 1", {0, 0}, "You find your core of s
 skill w3 = {"Fury Barrage", "Attack 1", 10, "", {3, 2}, "Your fast but fierce attacks unravel your opponent."};
 skill wa1 = {"Holy Shield", "Counter", 8, "", {4, 2}, "The light protects yourself from attacks and strikes back at your opponent."};
 skill wb1 = {"Charge of Blood", "Boost 2", 8, "", {3, 2}, "The heat of battle empowers you to strike harder."};
+skill wa2 = {"Divine Charge", "Attack 1", 10, "", {5, 2}, "Light swells around and as you rush forward, it rushes with you- a blade honed to pierce with the force of the heavens."};
 
 skill m1 = {"Fireball", "Attack 1", 5, "", {5, 1.5}, "A classic in every mage's repertoire."};
 skill m2 = {"Light Strike", "Attack 1", 8, "Blind", {5, 1.5}, "You cradle light in your hands and target your opponent."};
