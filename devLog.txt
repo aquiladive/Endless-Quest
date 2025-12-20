@@ -14,4 +14,6 @@ Things to do:
 -> Change randomised opponents according to area of battle.
 
 Things to fix:
--> Level up popup doesn't seem to be appearing despite a sufficient number of battles being fought
+-> Post the list of enemies before the battle starts so that battle strategy can be decided.
+-> Post character HP and MP for each turn.
+-> Increase the barrier for levelling up.
