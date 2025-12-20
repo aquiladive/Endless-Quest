@@ -3,8 +3,8 @@ v0.0.1
 Took the bare bones (particularly the battle aspect) of a text adventure I once made in order to make it a full-on keep fighting forever thing.
 
 Currently done:
--> Set up the core of the game, with fighting randomly generated enemies.
--> Added three basic classes - Warrior, Mage, Rogue. Will consider specialisations.
+-> Set up the core of the game, with fighting randomly generated enemies. Plot started on.
+-> Added three basic classes - Warrior, Mage, Rogue. Specialisations considered, subject to change.
 
 Things to do:
 -> Make the save function more than decorative text.
