@@ -140,7 +140,8 @@ void statAllocation(int statpt) {
 
 //--
 
-void initialiseOpponents(int opponents[], Monster Enemy[], int battleExp) {
+int initialiseOpponents(int opponents[], Monster Enemy[]) {
+    int battleExp = 0;
     for(int i=0;i<opponents[0];i++) {
         switch(opponents[i+1]) {
             case 1:
@@ -174,6 +175,7 @@ void initialiseOpponents(int opponents[], Monster Enemy[], int battleExp) {
             break;
         }
     }
+    return battleExp;
 }
 
 //--
@@ -285,11 +287,10 @@ void battleMechanic(int opponents[]) {
     int choice, skillChoice, attackChoice, attackType, itemChoice, damage=0;
     int enemyCount=opponents[0];
     int enemyAttack[2]; //2 to hold choice + damage
-    int battleExp=0;
     Monster Enemy[opponents[0]];
     Protag Reader=mainchar; //so that stat/status changes in battle don't affect overworld mainchar
 
-    initialiseOpponents(opponents, Enemy, battleExp);
+    int battleExp = initialiseOpponents(opponents, Enemy);
 
     do {
         if(turn%2==0) {
