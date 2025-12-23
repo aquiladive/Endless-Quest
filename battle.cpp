@@ -69,7 +69,7 @@ void levelUp(int battleExp) {
     //ie battles should not provide EXP that will boost level multiple times
     int initialExp=0, expReq=20;
     for(int i=1;i<mainchar.level;i++) {
-        expReq+=i*5;
+        expReq+=i*10;
     }
     if(battleExp>=expReq) {
         mainchar.level+=1;
