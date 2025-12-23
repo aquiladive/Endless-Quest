@@ -100,8 +100,8 @@ void statAllocation(int statpt) {
             cout<<"How many points do you want to assign?"<<endl;
             cin>>pt;
             if (pt<=statpt && pt>0) {
+                //comment: TODO this looks atrocious, create an int-string mapping to decide the upgraded stat and the printed comment
                 switch(stat) {
-                    //comment: TODO this looks atrocious, create an int-string mapping to decide the upgraded stat and the printed comment
                     case 1: cout<<"Your HP has been boosted by "<<pt;
                     mainchar.HP+=pt;
                     break;
@@ -329,7 +329,7 @@ void battleMechanic(int opponents[]) {
                 battleEnding();
             
             cout<<"\nYour turn:"<<endl;
-            cout<<"Do you:\n1) Attack\n2) Defend\n3) Use Skill\n"<<endl;
+            cout<<"Do you:\n1) Attack\n2) Defend\n3) Use Skill\n4) Check Status"<<endl;
             choice=chartoint();
             switch(choice) {
                 case 1:
@@ -339,6 +339,7 @@ void battleMechanic(int opponents[]) {
                 
                 
                 case 2:
+                //comment: TODO make "Defend" actually do something
                 break;
 
 
