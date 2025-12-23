@@ -40,8 +40,12 @@ int initiateBattles() {
             opponentRange = 3;
         else if(battleCount < 10)
             opponentRange = 6;
+        else
+            opponentRange = 6; //TODO comment: rough solution, to be changed for increasing battleCounts
+            
         for(int i = 1; i < number + 1; i++)
             opponents[i] = rand() % opponentRange + 1;
+
         battleMechanic(opponents);
         battleCount++;
         if(battleCount % 3 == 1) {
@@ -92,6 +96,7 @@ void townGladius() {
     cout<<"You have a union to find, and a quest to volunteer yourself for."<<endl;
     cin>>pause;
     cout<<"As you make your way to the union, you clear up some of the lesser monsters in the vicinity..."<<endl;
+    cout<<mainchar.battleExp<<endl;
 }
 
 void forestsBeyond_pt1() {
