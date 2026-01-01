@@ -35,3 +35,5 @@ skill r3 = {"Flash Strike", "Attack 1", 1, 8, "Blind", {3, 1.5}, "Your strikes a
 skill ra1 = {"Bloodletting", "BleedBoost", 2, 8, "", {3, 2}, "You give up some of your blood to the gods to gain their righteous force."};
 skill rb1 = {"Life Steal", "Drain", 1, 10, "", {3, 1.5}, "Your blade cuts your opponent and their life force is drawn to you."};
 skill ra2 = {"Giver to Shadows", "Attack All", 1, 12, "", {3, 1.5}, "You raise your hands and the shadows obey, lashing out like snakes."};
+skill rb2 = {"Fatal Sequence", "Attack 1", 1, 14, "Bleed", {3, 2}, "Your blade moves like the wind and repeatedly finds its target just as cuttingly."};
+
