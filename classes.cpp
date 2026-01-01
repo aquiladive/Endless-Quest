@@ -68,7 +68,7 @@ class Protag: public Character {
     string charClass;
     int level=1;
     int battleExp=0;
-    skill ability[3];
+    skill ability[6];
     int abilityCount;
 
     Protag () {
