@@ -1,5 +1,5 @@
 #include<iostream>
-#include "classes.cpp"
+#include "monsterCompendium.cpp"
 using namespace std;
 
 //--
