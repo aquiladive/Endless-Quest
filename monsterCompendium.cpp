@@ -18,8 +18,13 @@ Monster CloakedKnell("Cloaked Knell",20,0,20,10,10,15,0);
 
 //---
 
+Monster compendium[] = { Bounceshroom, Slime, FangedPuppy, DarkWolf, PoisonPetals, Saberhawk, MetalCube, CloakedKnell };
+
+//---
+
 void finaliseMonsters() {
     Bounceshroom.setValues("Spore", "DEF Down 1", "Bounce", "None", 10);
+    FangedPuppy.setValues("", "", "", "", 10);
     Slime.setValues("Acid", "DEF Down 1", "Ooze Trap", "Trapped 1", 10);
     DarkWolf.setValues("Shadow Claw", "None", "Restrain", "Trapped 1", 15);
     PoisonPetals.setValues("Acid", "DEF Down 1", "Lash", "None", 15);
