@@ -144,36 +144,38 @@ void statAllocation(int statpt) {
 int initialiseOpponents(int opponents[], Monster Enemy[]) {
     int battleExp = 0;
     for(int i=0;i<opponents[0];i++) {
-        switch(opponents[i+1]) {
-            case 1:
-            battleExp+=Bounceshroom.exppoint;
-            Enemy[i]=Bounceshroom;
-            break;
+        Enemy[i] = compendium[i];
+        battleExp += compendium[i].exppoint;
+        // switch(opponents[i+1]) {
+        //     case 1:
+        //     battleExp+=Bounceshroom.exppoint;
+        //     Enemy[i]=Bounceshroom;
+        //     break;
             
-            case 2:
-            battleExp+=10;
-            Enemy[i]=FangedPuppy;
-            break;
+        //     case 2:
+        //     battleExp+=10;
+        //     Enemy[i]=FangedPuppy;
+        //     break;
 
-            case 3:
-            battleExp+=Slime.exppoint;
-            Enemy[i]=Slime;
-            break;
+        //     case 3:
+        //     battleExp+=Slime.exppoint;
+        //     Enemy[i]=Slime;
+        //     break;
 
-            case 4:
-            battleExp+=15;
-            Enemy[i]=PoisonPetals;
-            break;
+        //     case 4:
+        //     battleExp+=15;
+        //     Enemy[i]=PoisonPetals;
+        //     break;
             
-            case 5:
-            battleExp+=DarkWolf.exppoint;
-            Enemy[i]=DarkWolf;
-            break;
+        //     case 5:
+        //     battleExp+=DarkWolf.exppoint;
+        //     Enemy[i]=DarkWolf;
+        //     break;
 
-            case 6:
-            battleExp+=15;
-            Enemy[i]=Saberhawk;
-            break;
+        //     case 6:
+        //     battleExp+=15;
+        //     Enemy[i]=Saberhawk;
+        //     break;
         }
     }
     return battleExp;
