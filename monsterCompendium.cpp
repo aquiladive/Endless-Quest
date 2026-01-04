@@ -1,3 +1,4 @@
+#include <map>
 #include "classes.cpp"
 
 Monster Bounceshroom("Bounceshroom",6,0,9,1,10,5,0);
@@ -23,9 +24,9 @@ Monster compendium[] = { Bounceshroom, Slime, FangedPuppy, DarkWolf, PoisonPetal
 //---
 
 void finaliseMonsters() {
-    Bounceshroom.setValues("Spore", "DEF Down 1", "Bounce", "None", 10);
-    FangedPuppy.setValues("", "", "", "", 10);
-    Slime.setValues("Acid", "DEF Down 1", "Ooze Trap", "Trapped 1", 10);
-    DarkWolf.setValues("Shadow Claw", "None", "Restrain", "Trapped 1", 15);
-    PoisonPetals.setValues("Acid", "DEF Down 1", "Lash", "None", 15);
+    compendium[0].setValues("Spore", "DEF Down 1", "Bounce", "None", 10);
+    compendium[1].setValues("Acid", "DEF Down 1", "Ooze Trap", "Trapped 1", 10);
+    compendium[2].setValues("", "", "", "", 10);
+    compendium[3].setValues("Shadow Claw", "None", "Restrain", "Trapped 1", 15);
+    compendium[4].setValues("Acid", "DEF Down 1", "Lash", "None", 15);
 }
