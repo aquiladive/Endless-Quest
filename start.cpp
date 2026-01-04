@@ -123,4 +123,5 @@ void forestsBeyond_pt2() {
     cout<<"There's no end to the parade of viciousness."<<endl;
     cout<<"\"Watch out!\" you cry, attacking wildly to the right, but it's too little and too late; the dark wolf leaps at Lain and in a blur of movement, blood sprays through the air as its fangs tear through flesh."<<endl;
     cout<<"The scream that follows is sharp and ear-piercing, and your jaw clenches in pained sympathy."<<endl;
+    cout<<"You refuse to look further and leave with the others. There's nothing to be saved..."<<endl;
 }
