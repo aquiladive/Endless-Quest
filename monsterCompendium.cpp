@@ -29,4 +29,6 @@ void finaliseMonsters() {
     compendium[2].setValues("", "", "", "", 10);
     compendium[3].setValues("Shadow Claw", "None", "Restrain", "Trapped 1", 15);
     compendium[4].setValues("Acid", "DEF Down 1", "Lash", "None", 15);
+    compendium[5].setValues("Cleave", "None", "", "", 20);
+    compendium[6].setValues("Layer", "DEF Up 2", "", "", 20);
 }
