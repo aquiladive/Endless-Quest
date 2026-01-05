@@ -17,6 +17,7 @@ Things to fix:
 -> Post the list of enemies before the battle starts so that battle strategy can be decided.
 -> Post character HP and MP for each turn.
 -> Increase the barrier for levelling up.
+-> Standardise effects (between skill compendium and monster compendium, and how they're used in battle.cpp)
 
 Future things:
 -> Include alternate language options? Or at least prepare for the possibility by making displayed lines an English language choice.
