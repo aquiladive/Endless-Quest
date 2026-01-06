@@ -101,6 +101,8 @@ void statAllocation(int statpt) {
             cin>>pt;
             if (pt<=statpt && pt>0) {
                 //comment: TODO this looks atrocious, create an int-string mapping to decide the upgraded stat and the printed comment
+                mainchar.MP += 5;
+                
                 switch(stat) {
                     case 1: cout<<"Your HP has been boosted by "<<pt;
                     mainchar.HP+=pt;
