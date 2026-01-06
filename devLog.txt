@@ -6,6 +6,9 @@ Currently done:
 -> Set up the core of the game, with fighting randomly generated enemies. Plot started.
 -> Added three basic classes - Warrior, Mage, Rogue. Specialisations considered, subject to change.
 
+Minor fixes:
+-> MP costs added to spell usage. Mana increases at a rate of 5 per level.
+
 Things to do:
 -> Make the save function more than decorative text.
 -> For the initialise opponent function, instead give id numbers to monsters that can be used to directly find and pull them into the battle set. (this will be useful when the roster of monsters increases)
