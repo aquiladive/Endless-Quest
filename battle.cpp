@@ -146,37 +146,6 @@ int initialiseOpponents(int opponents[], Monster Enemy[]) {
     for(int i=0;i<opponents[0];i++) {
         Enemy[i] = compendium[i];
         battleExp += compendium[i].exppoint;
-        // switch(opponents[i+1]) {
-        //     case 1:
-        //     battleExp+=Bounceshroom.exppoint;
-        //     Enemy[i]=Bounceshroom;
-        //     break;
-            
-        //     case 2:
-        //     battleExp+=10;
-        //     Enemy[i]=FangedPuppy;
-        //     break;
-
-        //     case 3:
-        //     battleExp+=Slime.exppoint;
-        //     Enemy[i]=Slime;
-        //     break;
-
-        //     case 4:
-        //     battleExp+=15;
-        //     Enemy[i]=PoisonPetals;
-        //     break;
-            
-        //     case 5:
-        //     battleExp+=DarkWolf.exppoint;
-        //     Enemy[i]=DarkWolf;
-        //     break;
-
-        //     case 6:
-        //     battleExp+=15;
-        //     Enemy[i]=Saberhawk;
-        //     break;
-        }
     }
     return battleExp;
 }
@@ -307,12 +276,12 @@ void battleMechanic(int opponents[]) {
             }
 
             for(int i=0;i<statusCount;i++) {
-                if(Reader.Status[i]=="DEF Down 1") {
+                if(Reader.Status[i]=="Stat Down") {
                     Reader.Status[i]="None";
-                    Reader.DEF=mainchar.DEF;
+                    Reader.DEF=mainchar.DEF-2;
                     statusCount--;
                 }
-                if(Reader.Status[i]=="Trapped 1") {
+                if(Reader.Status[i]=="Trapped") {
                     cout<<"You feel as if you're being squeezed painfully."<<endl;
                     cout<<"You take 2 points of damage."<<endl;
                     Reader.HP-=2;
@@ -351,10 +320,13 @@ void battleMechanic(int opponents[]) {
                     cout<<(i+1)<<") "<<Reader.ability[i].name<<": "<<Reader.ability[i].description<<"\n";
                 skillChoice=chartoint();
                 //to be done
-                if (skillChoice <= Reader.abilityCount) {
+                if (skillChoice <= Reader.abilityCount && Reader.MP >= Reader.ability[skillChoice-1].manaCost) {
+                    Reader.MP -= Reader.ability[skillChoice-1].manaCost;
                     skillSwitch(Reader.ability[skillChoice-1], Enemy, Reader, attackType, damageBonus, enemyCount, invalid, turn);
                 }
                 else {
+                    if(Reader.MP < Reader.ability[skillChoice-1].manaCost)
+                        cout<<"Too little MP for this spell."<<endl;
                     cout<<"Invalid choice."<<endl;
                     invalid=1;
                     turn++;
