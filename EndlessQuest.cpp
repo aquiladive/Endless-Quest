@@ -215,7 +215,7 @@ void battleEnding() {
     string blankSpace;
     cout<<"\nYou can no longer hold yourself upright."<<endl;
     cout<<"Every breath hurts, and your vision blurs at the edges as darkness takes over."<<endl;
-    cout<<"You collapse, consciousness fleeing you to never return, and your body remains forever in the ruins."<<endl;
+    cout<<"You collapse, consciousness fleeing you to never return, and only your corpse remains. never to be discovered."<<endl;
     cin>>blankSpace;
     cout<<"THE END"<<endl;
     cout<<"..."<<endl;
