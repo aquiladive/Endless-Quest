@@ -269,6 +269,7 @@ void battleMechanic(int opponents[]) {
     do {
         if(turn%2==0) {
             //player's turn
+            //TODO idk why an invalid variable is needed, check its purpose and remove if required
             int invalid=0;
             double damageBonus=1;
             
