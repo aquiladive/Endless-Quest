@@ -333,6 +333,20 @@ void battleMechanic(int opponents[]) {
                     invalid=1;
                     turn++;
                 }
+                break;
+
+                
+                case 4:
+                cout<<"HP: "<<Reader.HP<<"/"<<mainchar.HP<<" | MP: "<<Reader.MP<<"/"<<mainchar.MP<<endl;
+                cout<<"Current list of effects: "<<endl;
+                if(statusCount == 0)
+                    cout<<"None"<<endl;
+                else {
+                    for(int i = 0; i < statusCount; i++)
+                        cout<<Reader.Status[i]<<endl;
+                }
+                turn++;
+                break;
             } turn++; //end of user turn
         } //end of the first if
 
