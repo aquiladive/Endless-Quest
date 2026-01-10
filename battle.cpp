@@ -159,7 +159,7 @@ void attackOpponent(Monster Enemy[], Protag Reader, int attackType, double damag
 
     cout<<"Which enemy do you attack?"<<endl;
     for(int i=1;i<=enemyCount;i++) {
-        cout<<i<<") "<<Enemy[i-1].Name<<endl;
+        cout<<i<<") "<<Enemy[i-1].Name<<" ("<<Enemy[i-1].HP<<" HP)"<<endl;
     }
     attackChoice=chartoint();
     if(attackChoice>0 && attackChoice<=enemyCount) {
@@ -303,6 +303,10 @@ void battleMechanic(int opponents[]) {
                 battleEnding();
             
             cout<<"\nYour turn:"<<endl;
+            cout<<"You face: "<<endl;
+            for(int i=1;i<=enemyCount;i++) {
+                cout<<Enemy[i-1].Name<<endl;
+            }
             cout<<"Do you:\n1) Attack\n2) Defend\n3) Use Skill\n4) Check Status"<<endl;
             choice=chartoint();
             switch(choice) {
@@ -336,7 +340,7 @@ void battleMechanic(int opponents[]) {
                 }
                 break;
 
-                
+
                 case 4:
                 cout<<"HP: "<<Reader.HP<<"/"<<mainchar.HP<<" | MP: "<<Reader.MP<<"/"<<mainchar.MP<<endl;
                 cout<<"Current list of effects: "<<endl;
