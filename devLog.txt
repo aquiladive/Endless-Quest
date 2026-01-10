@@ -1,4 +1,4 @@
-v1.0.0
+v1.0.1
 
 Took the bare bones (particularly the battle aspect) of a text adventure I once made in order to make it a full-on keep fighting forever thing.
 
