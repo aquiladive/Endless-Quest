@@ -17,8 +17,8 @@ Things to do:
 -> Change randomised opponents according to area of battle.
 
 Things to fix:
--> Post the list of enemies before the battle starts so that battle strategy can be decided.
--> Post character HP and MP for each turn.
+-> Post the list of enemies before the battle starts so that battle strategy can be decided. -- done
+-> Post character HP and MP for each turn. -- added a "Check Status" option for it
 -> Increase the barrier for levelling up.
 -> Standardise effects (between skill compendium and monster compendium, and how they're used in battle.cpp)
 
