@@ -11,7 +11,7 @@ Minor fixes:
 
 Things to do:
 -> Make the save function more than decorative text.
--> For the initialise opponent function, instead give id numbers to monsters that can be used to directly find and pull them into the battle set. (this will be useful when the roster of monsters increases)
+-> For the initialise opponent function, instead give id numbers to monsters that can be used to directly find and pull them into the battle set. (this will be useful when the roster of monsters increases) -- somewhat done, monsterCompendium has been used to initialise, though ID numbers aren't used, just array position
 -> Adjust the random battles according to character level. -- in progress, number of opponents has been cut down according to player level
 -> Allow for character classes and specialisations. -- in progress
 -> Change randomised opponents according to area of battle.
