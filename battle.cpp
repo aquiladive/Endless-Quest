@@ -2,6 +2,8 @@
 #include "monsterCompendium.cpp"
 using namespace std;
 
+//TODO this file is getting unwieldy, separate skills, leveling up, battle logic etc into separate pages
+
 //--
 
 extern Protag mainchar;
