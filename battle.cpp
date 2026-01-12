@@ -2,8 +2,6 @@
 #include "monsterCompendium.cpp"
 using namespace std;
 
-//TODO this file is getting unwieldy, separate skills, leveling up, battle logic etc into separate pages
-
 //--
 
 extern Protag mainchar;
@@ -31,7 +29,7 @@ void battleEnding(), Tutorial2();
 
 void statusEffects(string effect[], int count) {
     for(int i=0;i<count;i++) {
-        if(effect[i]=="DEF Down 1") {
+        if(effect[i]=="Stat Down") {
             cout<<"The spell weakens you."<<endl;
         }
         else if(effect[i]=="Dizzy") {
@@ -215,7 +213,7 @@ void attackAll(Monster Enemy[], Protag Reader, int attackType, double damageBonu
     }
 }
 
-void skillSwitch(skill chosenSkill, Monster Enemy[], Protag Reader, int attackType, double damageBonus, int& enemyCount, int& invalid, int& turn) {
+void skillSwitch(skill chosenSkill, Monster Enemy[], Protag& Reader, int attackType, double damageBonus, int& statusCount, int& enemyCount, int& invalid, int& turn) {
     if(chosenSkill.type=="Attack 1") {
         if(chosenSkill.statModifier[0]==3)
             attackType=0;
@@ -232,6 +230,11 @@ void skillSwitch(skill chosenSkill, Monster Enemy[], Protag Reader, int attackTy
             attackType=1;
         damageBonus = chosenSkill.statModifier[1];
         attackAll(Enemy, Reader, attackType, damageBonus, enemyCount);
+    }
+    else if(chosenSkill.type=="Defense") {
+        Reader.Status[statusCount]="Invincible";
+        statusCount++;
+        statusCount=statusCheck(Reader.Status, statusCount);
     }
     else if(chosenSkill.type=="Heal") {
         if(chosenSkill.effect=="Recover 1") {
@@ -332,7 +335,7 @@ void battleMechanic(int opponents[]) {
                 //to be done
                 if (skillChoice <= Reader.abilityCount && Reader.MP >= Reader.ability[skillChoice-1].manaCost) {
                     Reader.MP -= Reader.ability[skillChoice-1].manaCost;
-                    skillSwitch(Reader.ability[skillChoice-1], Enemy, Reader, attackType, damageBonus, enemyCount, invalid, turn);
+                    skillSwitch(Reader.ability[skillChoice-1], Enemy, Reader, attackType, damageBonus, statusCount, enemyCount, invalid, turn);
                 }
                 else {
                     if(Reader.MP < Reader.ability[skillChoice-1].manaCost)
@@ -374,6 +377,11 @@ void battleMechanic(int opponents[]) {
             }
 
             for(int i=0;i<enemyCount;i++) {
+                if(Reader.Status[statusCount-1] == "Invincible") {
+                    cout<<"The hero takes no damage, no matter what the monsters do."<<endl;
+                    Reader.Status[statusCount--] = "None";
+                    break;
+                }
                 damage=Enemy[i].attack();
                 if(monsterChoice!=1) {
                     if(monsterChoice==2) {
