@@ -1,13 +1,21 @@
-v1.0.1
-
 Took the bare bones (particularly the battle aspect) of a text adventure I once made in order to make it a full-on "keep fighting forever" thing.
 
+Version History
+## v1.0.1
+-> Post the list of enemies before the battle starts so that battle strategy can be decided.
+-> Post character HP and MP for each turn. -- added a "Check Status" option for it
+
+Minor fixes:
+-> MP costs added to spell usage. Mana increases at a rate of 5 per level.
+
+## v1.0.0
 Currently done:
 -> Set up the core of the game, with fighting randomly generated enemies. Plot started.
 -> Added three basic classes - Warrior, Mage, Rogue. Specialisations considered, subject to change.
 
-Minor fixes:
--> MP costs added to spell usage. Mana increases at a rate of 5 per level.
+---
+Work items
+---
 
 Things to do:
 -> Make the save function more than decorative text.
@@ -17,8 +25,6 @@ Things to do:
 -> Change randomised opponents according to area of battle. -- in progress, currently just using a subset of monsters according to the scene the user is at
 
 Things to fix:
--> Post the list of enemies before the battle starts so that battle strategy can be decided. -- done
--> Post character HP and MP for each turn. -- added a "Check Status" option for it
 -> Increase the barrier for levelling up.
 -> Standardise effects (between skill compendium and monster compendium, and how they're used in battle.cpp)
 
