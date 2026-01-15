@@ -123,5 +123,7 @@ void forestsBeyond_pt2() {
     cout<<"There's no end to the parade of viciousness."<<endl;
     cout<<"\"Watch out!\" you cry, attacking wildly to the right, but it's too little and too late; the dark wolf leaps at Lain and in a blur of movement, blood sprays through the air as its fangs tear through flesh."<<endl;
     cout<<"The scream that follows is sharp and ear-piercing, and your jaw clenches in pained sympathy."<<endl;
-    cout<<"You refuse to look further, fearing it'll make you lose your nerve (and whatever is in your guts), and you leave with the others. There's nothing to be saved..."<<endl;
+    cout<<"You refuse to look further, fearing it'll make you lose your nerve (and whatever is in your guts), and you leave with the others. There's nothing that can be rescued..."<<endl;
+    cin>>pause;
+    cout<<"You all travel the next few miles in utter silence, the only sounds being those of fending off monsters. Sheila, who trained in matters of medicine, is the only one capable of healing magic and the main reason for your group's lack of injuries."<<endl;
 }
