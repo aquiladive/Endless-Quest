@@ -1,6 +1,9 @@
 #include <map>
 #include "classes.cpp"
 
+//TODO remove LUCK from Monsters? Maybe make MP matter for them as well?
+//Monster constructor: Name, HP, MP, ATK, DEF, MATK, MDEF, LUCK
+
 Monster Bounceshroom("Bounceshroom",6,0,9,1,10,5,0);
 
 Monster Slime("Slime",10,0,7,2,8,6,0);
@@ -12,6 +15,8 @@ Monster DarkWolf("Dark Wolf",12,0,15,1,10,3,2);
 Monster PoisonPetals("Poison Petals",8,0,10,3,10,5,0);
 
 Monster Saberhawk("Saberhawk",10,0,12,0,6,0,0);
+
+Monster ArmouredDillo ("Armored Dillo",15,0,7,10,7,10,0);
 
 Monster MetalCube("Metal Cube",10,0,8,10,6,10,0);
 
