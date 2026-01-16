@@ -16,7 +16,9 @@ Monster PoisonPetals("Poison Petals",8,0,10,3,10,5,0);
 
 Monster Saberhawk("Saberhawk",10,0,12,0,6,0,0);
 
-Monster ArmouredDillo ("Armored Dillo",15,0,7,10,7,10,0);
+Monster ArmouredDillo("Armored Dillo",15,0,7,10,7,10,0);
+
+Monster LavaSnake("Lava Snake",13,0,4,5,9,7,0);
 
 Monster MetalCube("Metal Cube",10,0,8,10,6,10,0);
 
@@ -24,16 +26,16 @@ Monster CloakedKnell("Cloaked Knell",20,0,20,10,10,15,0);
 
 //---
 
-Monster compendium[] = { Bounceshroom, Slime, FangedPuppy, DarkWolf, PoisonPetals, Saberhawk, MetalCube, CloakedKnell };
+Monster compendium[] = { Bounceshroom, Slime, FangedPuppy, DarkWolf, PoisonPetals, Saberhawk, ArmouredDillo, LavaSnake, MetalCube, CloakedKnell };
 
 //---
 
 void finaliseMonsters() {
-    compendium[0].setValues("Spore", "DEF Down 1", "Bounce", "None", 10);
-    compendium[1].setValues("Acid", "DEF Down 1", "Ooze Trap", "Trapped 1", 10);
-    compendium[2].setValues("", "", "", "", 10);
-    compendium[3].setValues("Shadow Claw", "None", "Restrain", "Trapped 1", 15);
-    compendium[4].setValues("Acid", "DEF Down 1", "Lash", "None", 15);
-    compendium[5].setValues("Cleave", "None", "", "", 20);
-    compendium[6].setValues("Layer", "DEF Up 2", "", "", 20);
+    compendium[0].setValues("Spore", "DEF Down 1", "Bounce", "None", 10); // Bounceshroom
+    compendium[1].setValues("Acid", "DEF Down 1", "Ooze Trap", "Trapped 1", 10); // Slime
+    compendium[2].setValues("", "", "", "", 10); // FangedPuppy
+    compendium[3].setValues("Shadow Claw", "None", "Restrain", "Trapped 1", 15); // DarkWolf
+    compendium[4].setValues("Acid", "DEF Down 1", "Lash", "None", 15); // PoisonPetals
+    compendium[5].setValues("Cleave", "None", "", "", 20); // Saberhawk
+    compendium[8].setValues("Layer", "DEF Up 2", "", "", 20); // MetalCube
 }
