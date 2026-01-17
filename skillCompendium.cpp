@@ -27,7 +27,8 @@ skill m1 = {"Fireball", "Attack 1", 1, 5, "", {5, 1.5}, "A classic in every mage
 skill m2 = {"Light Strike", "Attack 1", 1, 8, "Blind", {5, 1.5}, "You cradle light in your hands and target your opponent."};
 skill m3 = {"Icicle", "Attack 1", 1, 8, "Freeze", {5, 1.5}, "The water in the air crystallises and sharp icy daggers fly at your opponent."};
 skill ma1 = {"Tidal Wave", "Attack All", 1, 12, "", {5, 1.5}, "The water around you gathers and flows at your enemies as one unstoppable force."};
-skill mb1 = {"Arise, Ifrit", "Summon", 1, 20, "", {0, 0}, "The grand fire demon, Ifrit, is brought forth from its dimension to accompany you."};
+skill ma2 = {"Arise, Ifrit", "Summon", 1, 20, "", {0, 0}, "The grand fire demon, Ifrit, is brought forth from its dimension to accompany you."};
+skill mb2 = {"Wave of the Grave", "Summon", 1, 20, "", {0, 0}, "With the power of death in your hands, you call upon the bodies of those long gone."};
 
 skill r1 = {"Shadow Melt", "Defense", 1, 5, "", {0, 0}, "Cradled by the shadows, nothing can find you."};
 skill r2 = {"Piercing Gaze", "Boost", 1, 8, "", {3, 2}, "With your sharp eyes, you discover weaknesses."};
