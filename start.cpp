@@ -125,5 +125,7 @@ void forestsBeyond_pt2() {
     cout<<"The scream that follows is sharp and ear-piercing, and your jaw clenches in pained sympathy."<<endl;
     cout<<"You refuse to look further, fearing it'll make you lose your nerve (and whatever is in your guts), and you leave with the others. There's nothing that can be rescued..."<<endl;
     cin>>pause;
-    cout<<"You all travel the next few miles in utter silence, the only sounds being those of fending off monsters. Sheila, who trained in matters of medicine, is the only one capable of healing magic and the main reason for your group's lack of injuries."<<endl;
+    cout<<"You all travel the next few miles in utter silence, the only sounds being those of fending off monsters."<<endl;
+    cout<<"Though formed out of necessity rather than intent, it's easy to see this team works well together."<<endl;
+    cout<<"Asha's defensive spells reduces the painful injuries that the monsters are all too capable of inflicting. Lain, heavily armoured with lance in hand, draws attention and stands his ground while you, Franz and Verun take advantage to attack. Sheila rounds up with her healing magic, keeping attrition at bay."<<endl;
 }
