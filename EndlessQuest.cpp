@@ -1,5 +1,5 @@
 /************************************************************************
- * Endless Quest, v1.0.0
+ * Endless Quest, v1.0.1
 
  * (please refer to documentation log for further details)
 
