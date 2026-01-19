@@ -166,7 +166,7 @@ void Tutorial1() {
     cout<<"You are about to enter a battle. Would you like a short tutorial on this game's battle aspect?"<<endl;
     tutorial=yn();
     if(tutorial==1) {
-        cout<<"In battle, the poor hero you are will have to face off against some number of opponents."<<endl;
+        cout<<"In battle, you as the hero will undoubtedly have to face off against some number of opponents."<<endl;
         cout<<"This is turn-based, starting with your turn."<<endl;
         cout<<"On your turn, you can choose to do one of three things: attack, defend or use an item."<<endl;
         cout<<"Attacking damages the opponent and lowers their health."<<endl;
@@ -175,7 +175,7 @@ void Tutorial1() {
         cout<<"However, items have usage limits. Once they reach that limit, they can no longer be used."<<endl;
         cout<<"You will not know the breaking point until it has been reached. So it's good to be careful with item usage, but at the same time, don't stockpile them."<<endl;
         cout<<"They're there to be used."<<endl;
-        cout<<"Now go on and protect yourself!"<<endl;
+        cout<<"Now go on and fight the darkness of the world!"<<endl;
         cout<<"[tutorial end]"<<endl;
         cin>>blankSpace;
         cout<<endl;
