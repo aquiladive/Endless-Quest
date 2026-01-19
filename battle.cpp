@@ -323,7 +323,7 @@ void battleMechanic(int opponents[]) {
                 
                 
                 case 2:
-                //comment: TODO make "Defend" actually do something
+                //comment: TODO make "Defend" actually do something, or remove the option altogether - it's likely unnecessary
                 break;
 
 
