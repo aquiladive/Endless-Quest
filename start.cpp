@@ -115,6 +115,10 @@ void forestsBeyond_pt1() {
     cout<<"He isn't the silent type, despite appearances. He does add to the conversation, but he drifts in and out of it at will and answers nothing about himself."<<endl;
     cout<<"That mystery makes it feel like there's something important about him, but you choose to ignore him -- there's no use taking a horse to water if it won't drink, as a saying in your town goes."<<endl;
     cin>>pause;
+    cout<<"Instead, you try to get to know Asha and Lain better. You recall them faintly from your elementary schooling days; Lain was the same year but a different class, while Asha was a few years your senior."<<endl;
+    cout<<"Asha and Sheila teamed up for their graduation project, which is a year-long affair requiring them to gain practical experience and master some subset of their magic branch."<<endl;
+    cout<<"Meanwhile, Lain is working to be one of the Kriskitters, the elite guards of the district capital Estoc."<<endl;
+    cin>>pause;
     cout<<"Any way, the attention of the group sharpens as you all go deeper in and the denizens of the forest emerge..."<<endl;
 }
 
