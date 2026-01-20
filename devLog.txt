@@ -24,6 +24,7 @@ Things to do:
 -> Allow for character classes and specialisations. -- in progress
   -> need to add an option for choosing specialisation in the class
 -> Change randomised opponents according to area of battle. -- in progress, currently just using a subset of monsters according to the scene the user is at
+-> Remove "Defend" from battle options, alternatively replace it with something useful like "use item".
 
 Things to fix:
 -> Increase the barrier for levelling up.
