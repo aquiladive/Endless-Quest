@@ -118,6 +118,7 @@ void forestsBeyond_pt1() {
     cout<<"Instead, you try to get to know Asha and Lain better. You recall them faintly from your elementary schooling days; Lain was the same year but a different class, while Asha was a few years your senior."<<endl;
     cout<<"Asha and Sheila teamed up for their graduation project, which is a year-long affair requiring them to gain practical experience and master some subset of their magic branch."<<endl;
     cout<<"Meanwhile, Lain is working to be one of the Kriskitters, the elite guards of the district capital Estoc."<<endl;
+    cout<<"He's been studying for it for years, and this mission will help him cover another important area."<<endl;
     cin>>pause;
     cout<<"Any way, the attention of the group sharpens as you all go deeper in and the denizens of the forest emerge..."<<endl;
 }
