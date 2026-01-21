@@ -118,9 +118,12 @@ void forestsBeyond_pt1() {
     cout<<"Instead, you try to get to know Asha and Lain better. You recall them faintly from your elementary schooling days; Lain was the same year but a different class, while Asha was a few years your senior."<<endl;
     cout<<"Asha and Sheila teamed up for their graduation project, which is a year-long affair requiring them to gain practical experience and master some subset of their magic branch."<<endl;
     cout<<"Meanwhile, Lain is working to be one of the Kriskitters, the elite guards of the district capital Estoc."<<endl;
-    cout<<"He's been studying for it for years, and this mission will help him cover another important area."<<endl;
+    cout<<"He's been studying for it for years, and this mission will help him cover another important area for his qualification, as monster hunting tends to do for most combat professions."<<endl;
+    cout<<"Lain and Asha are both rather serious and take time to relax in the conversation, unsurprisingly, but you find that Asha has a sense for beauty in the (natural) flora and fauna around, and Lain has a cheerful sense of humour."<<endl;
+    cout<<"Though you don't tend to be the heart of a gathering, it makes the journey far more bearable to have friendly company."<<endl;
+    cout<<"You can't help but wonder briefly what it would have been like if Solia shared your dreams, before you force yourself to cast that way. It's a selfish thought; she has the right to choose her own path just as you do, even though she's a fabulous archer..."<<endl;
     cin>>pause;
-    cout<<"Any way, the attention of the group sharpens as you all go deeper in and the denizens of the forest emerge..."<<endl;
+    cout<<"You don't need to distract yourself however. Your attention, and that of the group's, sharpens as you all go deeper in and the denizens of the forest emerge..."<<endl;
 }
 
 void forestsBeyond_pt2() {
