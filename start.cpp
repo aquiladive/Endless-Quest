@@ -12,7 +12,7 @@ extern void finaliseMonsters();
 
 //--
 
-void townGladius(), forestsBeyond_pt1(), forestsBeyond_pt2();
+void townGladius(), forestsBeyond_pt1(), forestsBeyond_pt2(), forestsBeyond_pt3();
 void plotCall(int battleCount);
 
 //--
