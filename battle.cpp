@@ -84,13 +84,13 @@ void levelUp(int battleExp) {
 void statAllocation(int statpt) {
     //this also only holds for levelling up once
     int stat, pt;
+    mainchar.statList[6].value += 5;
+
     while (statpt>0) {
-        cout<<"Your current stats are:\n(1) HP = "<<mainchar.HP<<endl;
-        cout<<"(2) ATK = "<<mainchar.ATK<<endl;
-        cout<<"(3) DEF = "<<mainchar.DEF<<endl;
-        cout<<"(4) MATK = "<<mainchar.MATK<<endl;
-        cout<<"(5) MDEF = "<<mainchar.MDEF<<endl;
-        cout<<"(6) LUCK = "<<mainchar.LUCK<<endl;
+        cout<<"Your current stats are:"<<endl;
+        for(int i = 0; i < 6; i++) {
+            cout<<i+1<<") "<<mainchar.statList[i].name<<" = "<<mainchar.statList[i].value<<endl;
+        }
         cout<<"You have "<<statpt<<" stat points left to allocate."<<endl;
         cout<<"Choose stat you wish to assign points to, using the numbered index."<<endl;
         cin>>stat;
@@ -100,35 +100,8 @@ void statAllocation(int statpt) {
             cout<<"How many points do you want to assign?"<<endl;
             cin>>pt;
             if (pt<=statpt && pt>0) {
-                //comment: TODO this looks atrocious, create an int-string mapping to decide the upgraded stat and the printed comment
-                //might have to change stats in the class itself, to make all of them one array
-                mainchar.MP += 5;
-                
-                switch(stat) {
-                    case 1: cout<<"Your HP has been boosted by "<<pt;
-                    mainchar.HP+=pt;
-                    break;
-                
-                    case 2: cout<<"Your ATK has been boosted by "<<pt;
-                    mainchar.ATK+=pt;
-                    break;
-                
-                    case 3: cout<<"Your DEF has been boosted by "<<pt;
-                    mainchar.DEF+=pt;
-                    break;
-                
-                    case 4: cout<<"Your MATK has been boosted by "<<pt;
-                    mainchar.MATK+=pt;
-                    break;
-                
-                    case 5: cout<<"Your MDEF has been boosted by "<<pt;
-                    mainchar.MDEF+=pt;
-                    break;
-
-                    case 6: cout<<"Your LUCK has been boosted by "<<pt;
-                    mainchar.LUCK+=pt;
-                    break;
-                }
+                mainchar.statList[stat+1].value += pt;
+                cout<<"Your "<<mainchar.statList[stat+1].name<<" has been boosted by"<<pt;
                 if(pt>1)
                     cout<<" points."<<endl;
                 else
@@ -160,29 +133,29 @@ void attackOpponent(Monster Enemy[], Protag Reader, int attackType, double damag
 
     cout<<"Which enemy do you attack?"<<endl;
     for(int i=1;i<=enemyCount;i++) {
-        cout<<i<<") "<<Enemy[i-1].Name<<" ("<<Enemy[i-1].HP<<" HP)"<<endl;
+        cout<<i<<") "<<Enemy[i-1].Name<<" ("<<Enemy[i-1].statList[0].value<<" HP)"<<endl;
     }
     attackChoice=chartoint();
     if(attackChoice>0 && attackChoice<=enemyCount) {
         attackChoice--;
         if(attackType==0)
-            damage=Reader.attack()*damageBonus-Enemy[attackChoice].DEF;
+            damage=Reader.attack()*damageBonus-Enemy[attackChoice].statList[2].value;
         else if(attackType==1)
-            damage=Reader.magicAttack()*damageBonus-Enemy[attackChoice].MDEF;
+            damage=Reader.magicAttack()*damageBonus-Enemy[attackChoice].statList[4].value;
         if(damage<=0)
             damage=1;
         globalDamage = damage;
         cout<<Reader.Name<<" deals "<<damage<<" damage."<<endl;
-        Enemy[attackChoice].HP=Enemy[attackChoice].HP-damage;
-        if(Enemy[attackChoice].HP<=0) {
+        Enemy[attackChoice].statList[0].value=Enemy[attackChoice].statList[0].value-damage;
+        if(Enemy[attackChoice].statList[0].value <= 0) {
             cout<<Enemy[attackChoice].Name<<" has been defeated."<<endl;
             enemyCount--;
-            for(int i=attackChoice;i<enemyCount;i++) {
+            for(int i = attackChoice; i < enemyCount; i++) {
                 Enemy[i]=Enemy[i+1];
             }
         }
         else
-            cout<<Enemy[attackChoice].Name<<" has "<<Enemy[attackChoice].HP<<" health remaining."<<endl;
+            cout<<Enemy[attackChoice].Name<<" has "<<Enemy[attackChoice].statList[0].value<<" health remaining."<<endl;
         }
     else {
         cout<<"Invalid choice."<<endl;
@@ -195,21 +168,21 @@ void attackAll(Monster Enemy[], Protag Reader, int attackType, double damageBonu
     int damage;
     for(int i = 1; i <= enemyCount; i++) {
         if(attackType==0)
-            damage=Reader.attack()*damageBonus-Enemy[i].DEF;
+            damage=Reader.attack()*damageBonus-Enemy[i].statList[2].value;
         else if(attackType==1)
-            damage=Reader.magicAttack()*damageBonus-Enemy[i].MDEF;
+            damage=Reader.magicAttack()*damageBonus-Enemy[i].statList[4].value;
         if(damage<=0)
             damage=1;
 
         cout<<Reader.Name<<" deals "<<damage<<" damage."<<endl;
 
-        if(Enemy[i].HP<=0) {
+        if(Enemy[i].statList[0].value <= 0) {
             cout<<Enemy[i].Name<<" has been defeated."<<endl;
             enemyCount--;
             Enemy[i]=Enemy[i+1];
         }
         else
-            cout<<Enemy[i].Name<<" has "<<Enemy[i].HP<<" health remaining."<<endl;
+            cout<<Enemy[i].Name<<" has "<<Enemy[i].statList[0].value<<" health remaining."<<endl;
     }
 }
 
@@ -238,7 +211,7 @@ void skillSwitch(skill chosenSkill, Monster Enemy[], Protag& Reader, int attackT
     }
     else if(chosenSkill.type=="Heal") {
         if(chosenSkill.effect=="Recover 1") {
-            Reader.HP += 10;
+            Reader.statList[0].value += 10;
             cout<<"You feel a renewed energy in your tired bones."<<endl;
         }
     }
@@ -255,7 +228,7 @@ void skillSwitch(skill chosenSkill, Monster Enemy[], Protag& Reader, int attackT
         attackOpponent(Enemy, Reader, attackType, damageBonus, enemyCount, invalid, turn);
         int heal = globalDamage/2;
         cout<<"You have healed "<< heal << " points of HP."<<endl;
-        Reader.HP += heal;
+        Reader.statList[0].value += heal;
     }
 }
 
@@ -287,13 +260,13 @@ void battleMechanic(int opponents[]) {
             for(int i=0;i<statusCount;i++) {
                 if(Reader.Status[i]=="Stat Down") {
                     Reader.Status[i]="None";
-                    Reader.DEF=mainchar.DEF-2;
+                    Reader.statList[2].value = mainchar.statList[2].value-2;
                     statusCount--;
                 }
                 if(Reader.Status[i]=="Trapped") {
                     cout<<"You feel as if you're being squeezed painfully."<<endl;
                     cout<<"You take 2 points of damage."<<endl;
-                    Reader.HP-=2;
+                    Reader.statList[0].value -= 2;
                     Reader.Status[i]="None";
                     statusCount--;
                 }
@@ -305,7 +278,7 @@ void battleMechanic(int opponents[]) {
                 }
             }
 
-            if(Reader.HP<=0)
+            if(Reader.statList[0].value <= 0)
                 battleEnding();
             
             cout<<"\nYour turn:"<<endl;
@@ -333,12 +306,12 @@ void battleMechanic(int opponents[]) {
                     cout<<(i+1)<<") "<<Reader.ability[i].name<<": "<<Reader.ability[i].description<<"\n";
                 skillChoice=chartoint();
                 //to be done
-                if (skillChoice <= Reader.abilityCount && Reader.MP >= Reader.ability[skillChoice-1].manaCost) {
-                    Reader.MP -= Reader.ability[skillChoice-1].manaCost;
+                if (skillChoice <= Reader.abilityCount && Reader.statList[6].value >= Reader.ability[skillChoice-1].manaCost) {
+                    Reader.statList[6].value -= Reader.ability[skillChoice-1].manaCost;
                     skillSwitch(Reader.ability[skillChoice-1], Enemy, Reader, attackType, damageBonus, statusCount, enemyCount, invalid, turn);
                 }
                 else {
-                    if(Reader.MP < Reader.ability[skillChoice-1].manaCost)
+                    if(Reader.statList[6].value < Reader.ability[skillChoice-1].manaCost)
                         cout<<"Too little MP for this spell."<<endl;
                     cout<<"Invalid choice."<<endl;
                     invalid=1;
@@ -348,7 +321,7 @@ void battleMechanic(int opponents[]) {
 
 
                 case 4:
-                cout<<"HP: "<<Reader.HP<<"/"<<mainchar.HP<<" | MP: "<<Reader.MP<<"/"<<mainchar.MP<<endl;
+                cout<<"HP: "<<Reader.statList[0].value<<"/"<<mainchar.statList[0].value<<" | MP: "<<Reader.statList[6].value<<"/"<<mainchar.statList[6].value<<endl;
                 cout<<"Current list of effects: "<<endl;
                 if(statusCount == 0)
                     cout<<"None"<<endl;
@@ -367,7 +340,7 @@ void battleMechanic(int opponents[]) {
             //please remember in the future to add conditions for if the enemy is inflicted by a status
             //or unite both Reader and Enemy status effects under one function... which was what statusEffect was intended to be...
             for(int i=0;i<enemyCount;i++) {
-                if(Enemy[i].HP<=0) {
+                if(Enemy[i].statList[0].value <= 0) {
                     cout<<Enemy[i].Name<<" has been defeated."<<endl;
                     enemyCount--;
                     for(int i=attackChoice;i<enemyCount;i++) {
@@ -401,34 +374,34 @@ void battleMechanic(int opponents[]) {
                 }
                 for(int i=0;i<statusCount;i++) {
                     if(Reader.Status[statusCount]=="DEF Down 1") {
-                        Reader.DEF-=2;
+                        Reader.statList[2].value -= 2;
                     }
                 }
-                if(monsterChoice==1)
-                    damage=damage-Reader.DEF;
-                else if(monsterChoice>1)
-                    damage=damage-Reader.MDEF;
-                if(choice==2 && monsterChoice==1)
-                    damage=damage-2*Reader.DEF;
-                else if(choice==2 && monsterChoice>1)
-                    damage=damage-2*Reader.MDEF;
-                if(damage<=0)
-                    damage=1;
-                Reader.HP=Reader.HP-damage;
+                if(monsterChoice == 1)
+                    damage = damage - Reader.statList[2].value;
+                else if(monsterChoice > 1)
+                    damage = damage-Reader.statList[4].value;
+                if(choice == 2 && monsterChoice == 1)
+                    damage = damage - 2 * Reader.statList[2].value;
+                else if(choice == 2 && monsterChoice > 1)
+                    damage = damage - 2 * Reader.statList[4].value;
+                if(damage <= 0)
+                    damage = 1;
+                Reader.statList[0].value = Reader.statList[0].value - damage;
                 cout<<Enemy[i].Name<<" deals "<<damage<<" damage."<<endl;
             }
             
-            if(Reader.HP<=0)
+            if(Reader.statList[0].value <= 0)
                 battleEnding();
             
             else
-                cout<<Reader.Name<<" has "<<Reader.HP<<" health remaining."<<endl;
+                cout<<Reader.Name<<" has "<<Reader.statList[0].value<<" health remaining."<<endl;
             
             turn++;
         }
     } while(enemyCount!=0);
 
-    hp=Reader.HP;
+    hp=Reader.statList[0].value;
     mainchar.battleExp+=battleExp;
     cout<<endl;
     levelUp(mainchar.battleExp);
