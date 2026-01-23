@@ -2,6 +2,7 @@
 #include <ctime>
 #include <cstdlib> //ctime and cstdlib used for the srand(time(0)) and rand())
 #include "skillCompendium.cpp"
+#include "stats.cpp"
 using namespace std;
 
 //--
@@ -12,20 +13,20 @@ extern skill w1, w2, w3, m1, m2, m3, r1, r2, r3;
 
 class Character {
     public:
-    int HP, MP, DEF, ATK, MATK, MDEF, LUCK;
-    string Name, Status[4];
+    stat statList[7] = {HP, ATK, DEF, MATK, MDEF, LUCK, MP};
+    string Name, Status[6];
     Character() {
         //only Monster array initialisation
     }
     Character (string n, int a, int b, int x, int y, int z, int i, int j) {
         Name=n;
-        HP=a;
-        MP=b;
-        ATK=x;
-        DEF=y;
-        MATK=z;
-        MDEF=i;
-        LUCK=j;
+        statList[0].value=a;
+        statList[1].value=b;
+        statList[2].value=x;
+        statList[3].value=y;
+        statList[4].value=z;
+        statList[5].value=i;
+        statList[6].value=j;
     }
     virtual int attack()=0;
 };
@@ -38,13 +39,13 @@ class NPC: public Character {
     }
     NPC (string n, int a, int b, int x, int y, int z, int i, int j) {
         Name=n;
-        HP=a;
-        MP=b;
-        ATK=x;
-        DEF=y;
-        MATK=z;
-        MDEF=i;
-        LUCK=j;
+        statList[0].value=a;
+        statList[1].value=b;
+        statList[2].value=x;
+        statList[3].value=y;
+        statList[4].value=z;
+        statList[5].value=i;
+        statList[6].value=j;
     }
     
     int attack() {
@@ -77,21 +78,21 @@ class Protag: public Character {
     Protag (string n, string c, int a, int b, int x, int y, int z, int i, int j) {
         Name=n;
         charClass=c;
-        HP=a;
-        MP=b;
-        ATK=x;
-        DEF=y;
-        MATK=z;
-        MDEF=i;
-        LUCK=j;
+        statList[0].value=a;
+        statList[1].value=b;
+        statList[2].value=x;
+        statList[3].value=y;
+        statList[4].value=z;
+        statList[5].value=i;
+        statList[6].value=j;
     }
     
     int attack() {
-        return ATK;
+        return statList[1].value;
     }
 
     int magicAttack() {
-        return MATK;
+        return statList[3].value;
     }
 
     void getAbilities() {
@@ -160,13 +161,13 @@ class Monster: public Character {
     }
     Monster (string n, int a, int b, int x, int y, int z, int i, int j) {
         Name=n;
-        HP=a;
-        MP=b;
-        ATK=x;
-        DEF=y;
-        MATK=z;
-        MDEF=i;
-        LUCK=j;
+        statList[0].value=a;
+        statList[1].value=b;
+        statList[2].value=x;
+        statList[3].value=y;
+        statList[4].value=z;
+        statList[5].value=i;
+        statList[6].value=j;
     }
 
     string mattack1="\0", mattack1effect="\0";
@@ -190,17 +191,17 @@ class Monster: public Character {
         switch(choice) {
             case 1:
             cout<<Name<<" attacks."<<endl;
-            damage=ATK;
+            damage=statList[1].value;
             break;
                 
             case 2:
             cout<<Name<<" uses "<<mattack1<<endl;       
-            damage=MATK;
+            damage=statList[3].value;
             break;
                 
             case 3:
             cout<<Name<<" uses "<<mattack2<<endl;
-            damage=MATK;
+            damage=statList[3].value;
             break;
         }
         return damage;
