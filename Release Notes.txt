@@ -1,0 +1,13 @@
+## v1.0.1-IP
+1) The first arc of the story, Forests Beyond, is being worked on. Parts 1 and 2 are done. Part 3 is in progress.
+
+2) Important updates to the battle system and skills.
+-> Monster health is now displayed.
+-> Player character stats can be checked.
+-> Skills now cost MP, limiting their usage.
+
+.
+
+## v1.0.0
+-> Prologue of the story, Town Gladius, is playable.
+-> Character class choice is allowed (one among Warrior, Rogue or Mage).
