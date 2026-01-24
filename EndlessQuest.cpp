@@ -1,7 +1,7 @@
 /************************************************************************
- * Endless Quest, v1.0.1
+ * Endless Quest, v1.0.1-IP
 
- * (please refer to documentation log for further details)
+ * (please refer to release notes for further details)
 
 **************************************************************************/
 
