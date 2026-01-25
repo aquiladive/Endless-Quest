@@ -6,7 +6,6 @@ using namespace std;
 
 extern Protag mainchar;
 
-int hp; //for the same thing as in "ADiU"
 int battleCounter[3]; //for factors that affect certain battles
 int globalDamage; //inelegant solution for the drain issue, fix it later
 
