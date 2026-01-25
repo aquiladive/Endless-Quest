@@ -95,12 +95,13 @@ class Protag: public Character {
         return statList[3].value;
     }
 
+    //TODO maybe optimise, having to use getAbilities and scrolling through already set abilities seems off
     void getAbilities() {
-        if(charClass=="w")
+        if(charClass[0]=="w")
             warriorAbilities(*this);
-        if(charClass=="m")
+        if(charClass[0]=="m")
             mageAbilities(*this);
-        if(charClass=="r")
+        if(charClass[0]=="r")
             rogueAbilities(*this);
     }
 };
