@@ -107,6 +107,7 @@ void forestsBeyond_pt1() {
     cout<<"You haven't been to the forest before, but you're familiar with them through the many tales."<<endl;
     cout<<"You are part of a team of six. It is too little to walk into the Aragin Forest, and yet it is too much to assign to a quest of the farmers' union."<<endl;
     cout<<"It's the pay, you believe. You hadn't expected the union could scrounge up that much, but clearly the gravity of the issue had surpassed such matters."<<endl;
+    cout<<"It wasn't just that wolves were attacking the agricultural outskirts; the intensity and timing didn't match their usual actiivty, and the union wanted an investigation into it as much as possible, to remove the issue at its root."<<endl;
     cout<<"You're passingly familiarly with most people in the team, with all of you being from Gladius... there's Franz from the Renic Quarter, Asha and Sheila from the School of Arcane Arts, and Lain from the Steria Quarter."<<endl;
     cout<<"And that leaves just one who you don't know."<<endl;
     cin>>pause;
@@ -145,10 +146,18 @@ void forestsBeyond_pt2() {
     cout<<"Aragin Forest is dangerous, but only on the level of townspeople wandering in. For even two adventurers, it shouldn't possess a threat to navigate."<<endl;
     cout<<"Your team is going deeper in to flush out the wolves, but with six people, it should have been a breeze."<<endl;
     cout<<"Then... what exactly is going on here?"<<endl;
+    cout<<"It's not just the wolves, but every denizen of the forest?"<<endl;
     cout<<"You don't get much time to ponder that, as monsters test the boundaries of the camp."<<endl;
 }
 
 void forestsBeyond_pt3() {
     string pause;
     //to be done
+    cout<<"The night goes by in waves of activity, rising and receding by its own rhythm. By morning, most of you are rather weary, but still prepared to continue."<<endl;
+    cout<<"You mention your thoughts to Lain as you travel."<<endl;
+    cout<<"\"It could be the rise of evil,\" he suggests after listening to you with a creased brow. \"The Age of Darkness isn't just a name; it's a degenerative force plunging the world into worse straits. The forest creatures could be more susceptible to it.\""<<endl;
+    cout<<"It's a fair proposition. You haven't quite studied the background of the Age in detail, but from what you know, that explanation doesn't sound off."<<endl;
+    cout<<"\"That's not quite how it works,\" a small voice pipes up, and the two of you turn to see Sheila."<<endl;
+    cout<<"She flushes a little in the embarrassment of being caught listening in, but attempts to keep eye contact as obvious as it is that she wants to turn her face away."<<endl;
+    cout<<"\"What do you mean?\" you ask, giving her a quick out from it."<<endl;
 }
