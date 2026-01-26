@@ -8,7 +8,7 @@ Version History
 Minor fixes:
 -> MP costs added to spell usage. Mana increases at a rate of 5 per level.
 
-## v1.0.0
+## v0.0.1
 Currently done:
 -> Set up the core of the game, with fighting randomly generated enemies. Plot started.
 -> Added three basic classes - Warrior, Mage, Rogue. Specialisations considered, subject to change.
