@@ -155,9 +155,12 @@ void forestsBeyond_pt3() {
     //to be done
     cout<<"The night goes by in waves of activity, rising and receding by its own rhythm. By morning, most of you are rather weary, but still prepared to continue."<<endl;
     cout<<"You mention your thoughts to Lain as you travel."<<endl;
-    cout<<"\"It could be the rise of evil,\" he suggests after listening to you with a creased brow. \"The Age of Darkness isn't just a name; it's a degenerative force plunging the world into worse straits. The forest creatures could be more susceptible to it.\""<<endl;
+    cout<<"\"It could be the rise of evil,\" he suggests after listening to you with a creased brow. \"The Age of Darkness isn't just a name; it's a corruptive force plunging the world into worse straits. The forest creatures could be more susceptible to it.\""<<endl;
     cout<<"It's a fair proposition. You haven't quite studied the background of the Age in detail, but from what you know, that explanation doesn't sound off."<<endl;
     cout<<"\"That's not quite how it works,\" a small voice pipes up, and the two of you turn to see Sheila."<<endl;
     cout<<"She flushes a little in the embarrassment of being caught listening in, but attempts to keep eye contact as obvious as it is that she wants to turn her face away."<<endl;
     cout<<"\"What do you mean?\" you ask, giving her a quick out from it."<<endl;
+    cout<<"\"The urchontic force is indeed corrupting the existences of less sapient beings and distorting the barrier between the chaos realms to our world,\" she starts, taking on a lecture-like cadence that seems to remove her previous shyness."<<endl;
+    cout<<"\"However, it works progressively and on a large scale, as ascertained by using certain formulae. If the creatures of Aragin Forest are showing unexpected developments that spiked recently, then it should be something more than urchontism.\""<<endl;
+    cin>>pause;
 }
