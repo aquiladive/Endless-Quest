@@ -32,3 +32,4 @@ Things to fix:
 
 Future things:
 -> Include alternate language options? Or at least prepare for the possibility by making displayed lines an English language choice.
+-> Add MP to monster attacks as well to restrict them, or would that be too complicated to set up?
