@@ -163,4 +163,5 @@ void forestsBeyond_pt3() {
     cout<<"\"The urchontic force is indeed corrupting the existences of less sapient beings and distorting the barrier between the chaos realms to our world,\" she starts, taking on a lecture-like cadence that seems to remove her previous shyness."<<endl;
     cout<<"\"However, it works progressively and on a large scale, as ascertained by using certain formulae. If the creatures of Aragin Forest are showing unexpected developments that spiked recently, then it should be something more than urchontism.\""<<endl;
     cin>>pause;
+    cout<<"That... was definitely a fair amount to take in. You and Lain don't stay quiet for long though, with the latter asking, \"What do you think could be the cause, then?\""<<endl;
 }
