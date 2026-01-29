@@ -2,27 +2,27 @@
 #include "classes.cpp"
 
 //TODO remove LUCK from Monsters? Maybe make MP matter for them as well?
-//Monster constructor: Name, HP, MP, ATK, DEF, MATK, MDEF, LUCK
+//Monster constructor: HP, ATK, DEF, MATK, MDEF, LUCK, MP
 
-Monster Bounceshroom("Bounceshroom",6,0,9,1,10,5,0);
+Monster Bounceshroom("Bounceshroom",6,9,6,8,0,0,0);
 
-Monster Slime("Slime",10,0,7,2,8,6,0);
+Monster Slime("Slime",10,7,0,8,6,0,0);
 
-Monster FangedPuppy("Fanged Puppy",8,0,10,0,5,1,2);
+Monster FangedPuppy("Fanged Puppy",8,10,0,5,1,2,0);
 
-Monster DarkWolf("Dark Wolf",12,0,15,1,10,3,2);
+Monster DarkWolf("Dark Wolf",12,15,1,10,3,2,0);
 
-Monster PoisonPetals("Poison Petals",8,0,10,3,10,5,0);
+Monster PoisonPetals("Poison Petals",8,10,3,10,5,0,0);
 
-Monster Saberhawk("Saberhawk",10,0,12,0,6,0,0);
+Monster Saberhawk("Saberhawk",10,12,0,6,0,0,0);
 
-Monster ArmouredDillo("Armored Dillo",15,0,7,10,7,10,0);
+Monster ArmouredDillo("Armored Dillo",15,7,10,7,10,0,0);
 
-Monster LavaSnake("Lava Snake",13,0,4,5,9,7,0);
+Monster LavaSnake("Lava Snake",13,4,5,9,7,0,0);
 
-Monster MetalCube("Metal Cube",10,0,8,10,6,10,0);
+Monster MetalCube("Metal Cube",10,8,10,6,10,0,0);
 
-Monster CloakedKnell("Cloaked Knell",20,0,20,10,10,15,0);
+Monster CloakedKnell("Cloaked Knell",20,20,10,10,15,0,0);
 
 //---
 
