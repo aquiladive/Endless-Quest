@@ -6,6 +6,7 @@ using namespace std;
 
 extern Protag mainchar;
 
+int hp; //for the same thing as in "ADiU"
 int battleCounter[3]; //for factors that affect certain battles
 int globalDamage; //inelegant solution for the drain issue, fix it later
 
@@ -91,7 +92,7 @@ void statAllocation(int statpt) {
             cout<<i+1<<") "<<mainchar.statList[i].name<<" = "<<mainchar.statList[i].value<<endl;
         }
         cout<<"You have "<<statpt<<" stat points left to allocate."<<endl;
-        cout<<"Choose stat you wish to assign points to, using the numbered index."<<endl;
+        cout<<"Choose the stat you wish to assign points to, using the numbered index."<<endl;
         cin>>stat;
         if(stat<1 || stat>6)
             cout<<"Invalid stat.\n"<<endl;
@@ -99,12 +100,12 @@ void statAllocation(int statpt) {
             cout<<"How many points do you want to assign?"<<endl;
             cin>>pt;
             if (pt<=statpt && pt>0) {
-                mainchar.statList[stat+1].value += pt;
-                cout<<"Your "<<mainchar.statList[stat+1].name<<" has been boosted by"<<pt;
+                mainchar.statList[stat-1].value += pt;
+                cout<<"Your "<<mainchar.statList[stat-1].name<<" has been boosted by "<<pt;
                 if(pt>1)
-                    cout<<" points."<<endl;
+                    cout<<" points.\n"<<endl;
                 else
-                    cout<<" point."<<endl;
+                    cout<<" point.\n"<<endl;
                 statpt-=pt;
             }
             else {
