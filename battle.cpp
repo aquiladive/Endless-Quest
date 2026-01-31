@@ -17,6 +17,7 @@ int chartoint();
 int itemUse(string Item);
 void levelUp(int battleExp);
 void statAllocation(int statpt);
+void classAllocation();
 void statusEffects(string effect[], int count);
 int statusCheck(string effect[], int count);
 string statusAlign(string effect[], int count, int pos);
@@ -77,6 +78,8 @@ void levelUp(int battleExp) {
         cout<<"You have levelled up to Lv."<<mainchar.level<<"."<<endl;
         if(mainchar.level==2)
             Tutorial2();
+        if(mainchar.level==20)
+            classAllocation();
         statAllocation(5);
     }
 }
@@ -113,6 +116,10 @@ void statAllocation(int statpt) {
             }
         }
     }
+}
+
+void classAllocation() {
+    //to fill
 }
 
 //--
