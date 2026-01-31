@@ -164,4 +164,9 @@ void forestsBeyond_pt3() {
     cout<<"\"However, it works progressively and on a large scale, as ascertained by using certain formulae. If the creatures of Aragin Forest are showing unexpected developments that spiked recently, then it should be something more than urchontism.\""<<endl;
     cin>>pause;
     cout<<"That... was definitely a fair amount to take in. You and Lain don't stay quiet for long though, with the latter asking, \"What do you think could be the cause, then?\""<<endl;
+    cout<<"\"It's hard to say,\" Sheila answers, looking a little nervous again. \"It could be one of several things or multiple of them. An artifact, a spell, a ritual, a trait of some other creature... or even a Void Gate.\""<<endl;
+    cout<<"Void Gates... those were myths, though tiny ones were known to exist. So more like theory, you guess. Those were considered direct ways to travel to the chaos realms, though they appeared like holes in the barrier."<<endl;
+    cout<<"\"Of course, I'm just saying!\" Sheila waved her hands in a warding gesture. \"It's completely unlikely it's here, but it can cause issues in surroundings like this.\""<<endl;
+    cout<<"... you share a glance with Lain, and you can see your hope reflected in his eyes -- that she hasn't jinxed you all."<<endl;
+    cin>>pause;
 }
