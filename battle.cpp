@@ -119,7 +119,35 @@ void statAllocation(int statpt) {
 }
 
 void classAllocation() {
-    //to fill
+    string classA, classB, classStat, choice;
+    if(mainchar.charClass[0]=='w') {
+        classA = "Paladin";
+        classB = "Berserker";
+        classStat = "strength";
+    }
+    else if(mainchar.charClass[0]=='m') {
+        classA = "Elementalist";
+        classB = "Lich";
+        classStat = "magic";
+    }
+    else {
+        classA = "Shadowpriest";
+        classB = "Assassin";
+        classStat = "stealth";
+    }
+    cout<<"Your growth in "<<classStat<<" has opened a new path for you. You can choose to upgrade to one of the below:"<<endl;
+    cout<<classA<<" (enter a to choose)"<<endl;
+    cout<<classB<<" (enter b to choose)"<<endl;
+    cin>>choice;
+    choice = tolower(choice[0]);
+    if(choice != "a" || choice != "b") {
+        cout<<"Invalid choice. Retry."<<endl;
+        classAllocation();
+    }
+    else {
+        cout<<"Congrats! You have started walking down the path you chose; may you find it suited to your needs."<<endl;
+        mainchar.charClass += choice[0];
+    }
 }
 
 //--
