@@ -13,7 +13,7 @@ struct skill {
 
 //list of skill types: Attack 1, Attack All, Heal, Defense, Boost, Counter, Summon, Drain, BleedBoost (combines Bleed effect with Boost)
 //list of skill effects: Recover, Blind, Freeze
-//current idea for class progression: Warrior to either Paladin or Berserker, Mage to either Elementalist or Guardian (summons, large scale boosts) or Lich, Rogue to either Sacrificer or Assassin
+//current idea for class progression: Warrior to either Paladin or Berserker, Mage to either Elementalist or Guardian (summons, large scale boosts) or Lich, Rogue to either Shadowpriest or Assassin, Monk to either Cultist or Ritualist
 
 skill w1 = {"Force Strike", "Attack 1", 1, 5, "", {3, 1.5}, "A powerful attack that draws on your inner strength."};
 skill w2 = {"Meditate", "Heal", 1, 8, "Recover 1", {0, 0}, "You find your core of strength and draw on it to better heal your wounds."};
@@ -37,4 +37,3 @@ skill ra1 = {"Bloodletting", "BleedBoost", 2, 8, "", {3, 2}, "You give up some o
 skill rb1 = {"Life Steal", "Drain", 1, 10, "", {3, 1.5}, "Your blade cuts your opponent and their life force is drawn to you."};
 skill ra2 = {"Giver to Shadows", "Attack All", 1, 12, "", {3, 1.5}, "You raise your hands and the shadows obey, lashing out like snakes."};
 skill rb2 = {"Fatal Sequence", "Attack 1", 1, 14, "Bleed", {3, 2}, "Your blade moves like the wind and repeatedly finds its target just as cuttingly."};
-
