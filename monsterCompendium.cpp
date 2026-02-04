@@ -4,7 +4,7 @@
 //TODO remove LUCK from Monsters? Maybe make MP matter for them as well?
 //Monster constructor: HP, ATK, DEF, MATK, MDEF, LUCK, MP
 
-Monster Bounceshroom("Bounceshroom",6,9,6,8,0,0,0);
+Monster Bounceshroom("Bounceshroom",6,9,3,8,0,0,0);
 
 Monster Slime("Slime",10,7,0,8,6,0,0);
 
