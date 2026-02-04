@@ -140,12 +140,13 @@ void classAllocation() {
     cout<<classB<<" (enter b to choose)"<<endl;
     cin>>choice;
     choice = tolower(choice[0]);
-    if(choice != "a" || choice != "b") {
+    cout<<choice;
+    if(choice != "a" && choice != "b") {
         cout<<"Invalid choice. Retry."<<endl;
         classAllocation();
     }
     else {
-        cout<<"Congrats! You have started walking down the path you chose; may you find it suited to your needs."<<endl;
+        cout<<"Congrats! You have started walking down the path you chose; may you find it suited to your needs.\n\n"<<endl;
         mainchar.charClass += choice[0];
     }
 }
