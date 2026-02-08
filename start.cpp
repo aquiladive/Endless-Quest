@@ -169,4 +169,5 @@ void forestsBeyond_pt3() {
     cout<<"\"Of course, I'm just saying!\" Sheila waved her hands in a warding gesture. \"It's completely unlikely it's here, but it can cause issues in surroundings like this.\""<<endl;
     cout<<"... you share a glance with Lain, and you can see your hope reflected in his eyes -- that she hasn't jinxed you all."<<endl;
     cin>>pause;
+    cout<<"Asha, who was leading the group alongside Verun, casting and maintaining defensive spells over everyone, steps back for a break. Lain takes point, leaving you with her and Sheila."<<endl;
 }
