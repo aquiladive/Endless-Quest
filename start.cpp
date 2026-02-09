@@ -131,7 +131,7 @@ void forestsBeyond_pt2() {
     string pause;
     
     cout<<"Wolves with fur dark enough to be stolen from the night, poisonous flora that wait for you to lower your guard before it comes to life...."<<endl;
-    cout<<"There's no end to the parade of viciousness."<<endl;
+    cout<<"It's been four days that you all have been in this forest and there's no end to the parade of viciousness."<<endl;
     cout<<"\"Watch out!\" you cry, attacking wildly to the right, but it's too little and too late; the dark wolf leaps at Franz and in a blur of movement, blood sprays through the air as its fangs tear through flesh."<<endl;
     cout<<"The scream that follows is sharp and ear-piercing, and your jaw clenches in pained sympathy."<<endl;
     cout<<"You refuse to look further, fearing it'll make you lose your nerve (and whatever is in your guts), and you leave with the others. There's nothing that can be rescued..."<<endl;
