@@ -158,7 +158,7 @@ void forestsBeyond_pt3() {
     cout<<"\"It could be the rise of evil,\" he suggests after listening to you with a creased brow. \"The Age of Darkness isn't just a name; it's a corruptive force plunging the world into worse straits. The forest creatures could be more susceptible to it.\""<<endl;
     cout<<"It's a fair proposition. You haven't quite studied the background of the Age in detail, but from what you know, that explanation doesn't sound off."<<endl;
     cout<<"\"That's not quite how it works,\" a small voice pipes up, and the two of you turn to see Sheila."<<endl;
-    cout<<"She flushes a little in the embarrassment of being caught listening in, but attempts to keep eye contact as obvious as it is that she wants to turn her face away."<<endl;
+    cout<<"She flushes a little in the embarrassment of being caught listening in, but she attempts to keep eye contact as obvious as it is that she wants to turn her face away."<<endl;
     cout<<"\"What do you mean?\" you ask, giving her a quick out from it."<<endl;
     cout<<"\"The urchontic force is indeed corrupting the existences of less sapient beings and distorting the barrier between the chaos realms to our world,\" she starts, taking on a lecture-like cadence that seems to remove her previous shyness."<<endl;
     cout<<"\"However, it works progressively and on a large scale, as ascertained by using certain formulae. If the creatures of Aragin Forest are showing unexpected developments that spiked recently, then it should be something more than urchontism.\""<<endl;
@@ -169,5 +169,7 @@ void forestsBeyond_pt3() {
     cout<<"\"Of course, I'm just saying!\" Sheila waved her hands in a warding gesture. \"It's completely unlikely it's here, but it can cause issues in surroundings like this.\""<<endl;
     cout<<"... you share a glance with Lain, and you can see your hope reflected in his eyes -- that she hasn't jinxed you all."<<endl;
     cin>>pause;
-    cout<<"Asha, who was leading the group alongside Verun, casting and maintaining defensive spells over everyone, steps back for a break. Lain takes point, leaving you with her and Sheila."<<endl;
+    cout<<"Asha, who was leading the group alongside Verun, casting and maintaining defensive spells over everyone, steps back for a break. Lain switches with Asha and takes point, leaving you with her and Sheila."<<endl;
+    cout<<"\"You seem to be deep in discussion,\" Asha says softly, tilting her head at Sheila."<<endl;
+    cout<<"You had not planned to make your still-blossoming thoughts known to all, but you would have chosen Asha more than Sheila to confide even after the comradery of your previous days. And so you explain the matter to her as well."<<endl;
 }
