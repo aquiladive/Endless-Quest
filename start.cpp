@@ -130,7 +130,7 @@ void forestsBeyond_pt1() {
 void forestsBeyond_pt2() {
     string pause;
     
-    cout<<"Wolves with fur dark enough to be stolen from the night, poisonous flora that wait for you to lower your guard before it comes to life...."<<endl;
+    cout<<"Wolves with fur dark enough to have been stolen from the fabric of night, poisonous flora that wait for you to lower your guard before it comes to life...."<<endl;
     cout<<"It's been four days that you all have been in this forest and there's no end to the parade of viciousness."<<endl;
     cout<<"\"Watch out!\" you cry, attacking wildly to the right, but it's too little and too late; the dark wolf leaps at Franz and in a blur of movement, blood sprays through the air as its fangs tear through flesh."<<endl;
     cout<<"The scream that follows is sharp and ear-piercing, and your jaw clenches in pained sympathy."<<endl;
@@ -138,13 +138,13 @@ void forestsBeyond_pt2() {
     cin>>pause;
     cout<<"You all travel the next few miles in utter silence, the only sounds being those of fending off monsters."<<endl;
     cout<<"Though formed out of necessity rather than intent, it's easy to see this team works well together."<<endl;
-    cout<<"Asha's defensive spells reduces the painful injuries that the monsters are all too capable of inflicting. Lain, heavily armoured with lance in hand, draws attention and stands his ground while you, you and Verun take advantage to attack. Sheila rounds up with her healing magic, keeping attrition at bay."<<endl;
+    cout<<"Asha's defensive spells reduces the painful injuries that the monsters are all too capable of inflicting. Lain, heavily armoured with lance in hand, draws attention and stands his ground while you and Verun take advantage to attack. Sheila rounds up with her healing magic, keeping attrition at bay."<<endl;
     cout<<"Franz was also one of the main attackers..."<<endl;
     cout<<"You clench your jaw as your thoughts drift to him, wondering if there'll be anything of his body left."<<endl;
     cin>>pause;
     cout<<"It doesn't strike you until much later, when everyone settles in for the night and you take the first watch, what it means that your team is *good*."<<endl;
     cout<<"Aragin Forest is dangerous, but only on the level of townspeople wandering in. For even two adventurers, it shouldn't possess a threat to navigate."<<endl;
-    cout<<"Your team is going deeper in to flush out the wolves, but with six people, it should have been a breeze."<<endl;
+    cout<<"Your team is going deeper in to flush out the wolves, true, but with six people, it should have been a breeze."<<endl;
     cout<<"Then... what exactly is going on here?"<<endl;
     cout<<"It's not just the wolves, but every denizen of the forest?"<<endl;
     cout<<"You don't get much time to ponder that, as monsters test the boundaries of the camp."<<endl;
