@@ -170,6 +170,7 @@ void forestsBeyond_pt3() {
     cout<<"... you share a glance with Lain, and you can see your hope reflected in his eyes -- that she hasn't jinxed you all."<<endl;
     cin>>pause;
     cout<<"Asha, who was leading the group alongside Verun, casting and maintaining defensive spells over everyone, steps back for a break. Lain switches with Asha and takes point, leaving you with her and Sheila."<<endl;
-    cout<<"\"You seem to be deep in discussion,\" Asha says softly, tilting her head at Sheila."<<endl;
+    cout<<"\"You seem to be deep in discussion,\" Asha says softly, tilting her head at Sheila, who flushes a little simply at the inquiry."<<endl;
     cout<<"You had not planned to make your still-blossoming thoughts known to all, but you would have chosen Asha more than Sheila to confide even after the comradery of your previous days. And so you explain the matter to her as well."<<endl;
+    cout<<"\"I did notice more difficulty here than expected,\" she validates you. \"But I've never considered Aragin Forest before, so I thought perhaps it was just an issue of my perception.\""<<endl;
 }
