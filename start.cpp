@@ -172,5 +172,8 @@ void forestsBeyond_pt3() {
     cout<<"Asha, who was leading the group alongside Verun, casting and maintaining defensive spells over everyone, steps back for a break. Lain switches with Asha and takes point, leaving you with her and Sheila."<<endl;
     cout<<"\"You seem to be deep in discussion,\" Asha says softly, tilting her head at Sheila, who flushes a little simply at the inquiry."<<endl;
     cout<<"You had not planned to make your still-blossoming thoughts known to all, but you would have chosen Asha more than Sheila to confide even after the comradery of your previous days. And so you explain the matter to her as well."<<endl;
-    cout<<"\"I did notice more difficulty here than expected,\" she validates you. \"But I've never considered Aragin Forest before, so I thought perhaps it was just an issue of my perception.\""<<endl;
+    cout<<"\"I did notice more difficulty here than expected,\" she validates you. \"But I've never studied Aragin Forest before, so I thought perhaps it was just an issue of my perception.\""<<endl;
+    cout<<"\""<<mainchar.Name<<" is right on that,\" Lain says. \"I've cleared out the edges of the forest a few times; they're hostile but not this much.\""<<endl;
+    cout<<"\"You haven't been to the forest before though?\" Asha asks you in a tone that's more of a statement."<<endl;
+    cout<<"\"You feel just a tad embarrassed, but you answer, \"I've studied it. I always planned to leave home once I was old enough.\""<<endl;
 }
