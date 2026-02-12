@@ -24,9 +24,11 @@ Monster MetalCube("Metal Cube",10,8,10,6,10,0,0);
 
 Monster CloakedKnell("Cloaked Knell",20,20,10,10,15,0,0);
 
+Monster ThornyWisp("Thorny Wisp",12,9,3,9,10,0,0);
+
 //---
 
-Monster compendium[] = { Bounceshroom, Slime, FangedPuppy, DarkWolf, PoisonPetals, Saberhawk, ArmouredDillo, LavaSnake, MetalCube, CloakedKnell };
+Monster compendium[] = { Bounceshroom, Slime, FangedPuppy, DarkWolf, PoisonPetals, Saberhawk, ArmouredDillo, LavaSnake, MetalCube, CloakedKnell, ThornyWisp };
 
 //---
 
