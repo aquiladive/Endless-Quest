@@ -176,4 +176,5 @@ void forestsBeyond_pt3() {
     cout<<"\""<<mainchar.Name<<" is right on that,\" Lain says. \"I've cleared out the edges of the forest a few times; they're hostile but not this much.\""<<endl;
     cout<<"\"You haven't been to the forest before though?\" Asha asks you in a tone that's more of a statement."<<endl;
     cout<<"\"You feel just a tad embarrassed, but you answer, \"I've studied it. I always planned to leave home once I was old enough.\""<<endl;
+    cout<<"Luckily neither of them ask you any more questions; to tell Solia you want to be the next Hero is one thing, and telling it to people you've known only for a few days is another."<<endl;
 }
