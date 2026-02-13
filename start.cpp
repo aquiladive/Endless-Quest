@@ -12,7 +12,7 @@ extern void finaliseMonsters();
 
 //--
 
-void townGladius(), forestsBeyond_pt1(), forestsBeyond_pt2(), forestsBeyond_pt3();
+void townGladius(), forestsBeyond_pt1(), forestsBeyond_pt2(), forestsBeyond_pt3(), forestsBeyond_pt4();
 void plotCall(int battleCount);
 
 //--
@@ -64,7 +64,9 @@ void plotCall(int battleCount) {
         break;
         case 7: forestsBeyond_pt2();
         break;
-        case 12: forestsBeyond_pt3();
+        case 10: forestsBeyond_pt3();
+        break;
+        case 13: forestsBeyond_pt4();
         break;
     }
 }
@@ -152,7 +154,6 @@ void forestsBeyond_pt2() {
 
 void forestsBeyond_pt3() {
     string pause;
-    //to be done
     cout<<"The night goes by in waves of activity, rising and receding by its own rhythm. By morning, most of you are rather weary, but still prepared to continue."<<endl;
     cout<<"You mention your thoughts to Lain as you travel."<<endl;
     cout<<"\"It could be the rise of evil,\" he suggests after listening to you with a creased brow. \"The Age of Darkness isn't just a name; it's a corruptive force plunging the world into worse straits. The forest creatures could be more susceptible to it.\""<<endl;
@@ -177,4 +178,10 @@ void forestsBeyond_pt3() {
     cout<<"\"You haven't been to the forest before though?\" Asha asks you in a tone that's more of a statement."<<endl;
     cout<<"\"You feel just a tad embarrassed, but you answer, \"I've studied it. I always planned to leave home once I was old enough.\""<<endl;
     cout<<"Luckily neither of them ask you any more questions; to tell Solia you want to be the next Hero is one thing, and telling it to people you've known only for a few days is another."<<endl;
+    cout<<"The rest of the day goes by in the tedious grind of fighting off monsters."<<endl; 
+}
+
+void forestsBeyond_pt4() {
+    string pause;
+    //to be done
 }
