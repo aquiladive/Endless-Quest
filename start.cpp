@@ -118,7 +118,8 @@ void forestsBeyond_pt1() {
     cout<<"He isn't the silent type, despite appearances. He does add to the conversation, but he drifts in and out of it at will and answers nothing about himself."<<endl;
     cout<<"That mystery makes it feel like there's something important about him, but you choose to ignore him -- there's no use taking a horse to water if it won't drink, as a saying in your town goes."<<endl;
     cin>>pause;
-    cout<<"Instead, you try to get to know Asha and Lain better. You recall them faintly from your elementary schooling days; Lain was the same year but a different class, while Asha was a few years your senior."<<endl;
+    cout<<"Instead, you try to get to know Asha and Lain better. You recall them faintly from your elementary schooling days; the school you studied in is the largest and most well-known in Gladius, and it isn't unusual to run into other graduates of it."<<endl;
+    cout<<"Lain was the same year but a different class, while Asha was a few years your senior."<<endl;
     cout<<"Asha and Sheila teamed up for their graduation project, which is a year-long affair requiring them to gain practical experience and master some subset of their magic branch."<<endl;
     cout<<"Meanwhile, Lain is working to be one of the Kriskitters, the elite guards of the district capital Estoc."<<endl;
     cout<<"He's been studying for it for years, and this mission will help him cover another important area for his qualification, as monster hunting tends to do for most combat professions."<<endl;
@@ -154,6 +155,7 @@ void forestsBeyond_pt2() {
 
 void forestsBeyond_pt3() {
     string pause;
+    
     cout<<"The night goes by in waves of activity, rising and receding by its own rhythm. By morning, most of you are rather weary, but still prepared to continue."<<endl;
     cout<<"You mention your thoughts to Lain as you travel."<<endl;
     cout<<"\"It could be the rise of evil,\" he suggests after listening to you with a creased brow. \"The Age of Darkness isn't just a name; it's a corruptive force plunging the world into worse straits. The forest creatures could be more susceptible to it.\""<<endl;
