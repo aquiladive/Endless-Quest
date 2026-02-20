@@ -180,10 +180,13 @@ void forestsBeyond_pt3() {
     cout<<"\"You haven't been to the forest before though?\" Asha asks you in a tone that's more of a statement."<<endl;
     cout<<"\"You feel just a tad embarrassed, but you answer, \"I've studied it. I always planned to leave home once I was old enough.\""<<endl;
     cout<<"Luckily neither of them ask you any more questions; to tell Solia you want to be the next Hero is one thing, and telling it to people you've known only for a few days is another."<<endl;
-    cout<<"The rest of the day goes by in the tedious grind of fighting off monsters."<<endl; 
+    cout<<"The rest of the day goes by in the tedious grind of fighting off monsters."<<endl;
 }
 
 void forestsBeyond_pt4() {
     string pause;
     //to be done
+
+    cout<<"Three days afterwards, you've all scoured further into the forest than you ever expected you would. Your pace is slowing though and your supplies flagging."<<endl;
+    cout<<"All of you unanimously come to a decision -- if you can't find out more in the next two days, you'll be heading back. Sure, it won't be a mission *success*, but what you've done is already worth far more than what you're being paid."<<endl;
 }
