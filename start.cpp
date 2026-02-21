@@ -189,4 +189,5 @@ void forestsBeyond_pt4() {
 
     cout<<"Three days afterwards, you've all scoured further into the forest than you ever expected you would. Your pace is slowing though and your supplies flagging."<<endl;
     cout<<"All of you unanimously come to a decision -- if you can't find out more in the next two days, you'll be heading back. Sure, it won't be a mission *success*, but what you've done is already worth far more than what you're being paid."<<endl;
+    cout<<"As the first afternoon rolls by, you've made your way into a clearing, where the canopy is so thick that not a beam of light makes its way through to the forest floor."<<endl;
 }
