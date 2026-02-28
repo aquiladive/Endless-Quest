@@ -191,4 +191,7 @@ void forestsBeyond_pt4() {
     cout<<"All of you unanimously come to a decision -- if you can't find out more in the next two days, you'll be heading back. Sure, it won't be a mission *success*, but what you've done is already worth far more than what you're being paid."<<endl;
     cout<<"As the first afternoon rolls by, you've made your way into a clearing, where the canopy is so thick that not a beam of light makes its way through to the forest floor."<<endl;
     cout<<"The gentle sounds of a flowing river reach you, and you tilt your head as you try to figure from which direction it is and how close it might be."<<endl;
+    cout<<"Verun suddenly takes point, bypassing Lain, who makes a sound of confusion."<<endl;
+    cout<<"\"Quiet,\" Verun says in a barely audible whisper, taking his bow off his back and nocking an arrow in a quicksilver movement."<<endl;
+    cout<<"A bit of indignation radiates from Lain, but only for a second before he takes a prepared stance as well."<<endl;
 }
