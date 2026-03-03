@@ -40,6 +40,8 @@ int initiateBattles() {
             opponentRange = 3;
         else if(battleCount < 10)
             opponentRange = 6;
+        else if(battleCount == 13)
+            opponentRange = 101;
         else
             opponentRange = 6; //TODO comment: rough solution, to be changed for increasing battleCounts
             
