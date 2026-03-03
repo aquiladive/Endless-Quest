@@ -14,6 +14,10 @@ Monster DarkWolf("Dark Wolf",12,15,1,10,3,2,0);
 
 Monster PoisonPetals("Poison Petals",8,10,3,10,5,0,0);
 
+Monster DarkFog("Phantoms of the Fog",20,10,4,10,4,0,0);
+
+Monster ForestKingBoar("Forest King Boar",25,7,5,7,10,0,0);
+
 Monster Saberhawk("Saberhawk",10,12,0,6,0,0,0);
 
 Monster ArmouredDillo("Armored Dillo",15,7,10,7,10,0,0);
@@ -28,7 +32,8 @@ Monster ThornyWisp("Thorny Wisp",12,9,3,9,10,0,0);
 
 //---
 
-Monster compendium[] = { Bounceshroom, Slime, FangedPuppy, DarkWolf, PoisonPetals, Saberhawk, ArmouredDillo, LavaSnake, MetalCube, CloakedKnell, ThornyWisp };
+Monster compendium[] = { Bounceshroom, Slime, FangedPuppy, DarkWolf, PoisonPetals, DarkFog, ForestKingBoar,
+Saberhawk, ArmouredDillo, LavaSnake, MetalCube, CloakedKnell, ThornyWisp };
 
 //---
 
@@ -38,6 +43,8 @@ void finaliseMonsters() {
     compendium[2].setValues("", "", "", "", 10); // FangedPuppy
     compendium[3].setValues("Shadow Claw", "None", "Restrain", "Trapped 1", 15); // DarkWolf
     compendium[4].setValues("Acid", "DEF Down 1", "Lash", "None", 15); // PoisonPetals
-    compendium[5].setValues("Cleave", "None", "", "", 20); // Saberhawk
-    compendium[8].setValues("Layer", "DEF Up 2", "", "", 20); // MetalCube
+    compendium[5].setValues("Lygophobia", "Trapped 2", "Devour", "None", 30); //Phantoms of the Fog
+    compendium[6].setValues("Rage Rush", "None", "Steady", "DEF Up 2", 40); //Forest King Boar
+    compendium[7].setValues("Cleave", "None", "", "", 20); // Saberhawk
+    compendium[10].setValues("Layer", "DEF Up 2", "", "", 20); // MetalCube
 }
