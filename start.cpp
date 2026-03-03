@@ -41,12 +41,22 @@ int initiateBattles() {
         else if(battleCount < 10)
             opponentRange = 6;
         else if(battleCount == 13)
-            opponentRange = 101;
+            opponentRange = 901;
+        else if(battleCount == 14)
+            opponentRange = 902;
         else
             opponentRange = 6; //TODO comment: rough solution, to be changed for increasing battleCounts
-            
-        for(int i = 1; i < number + 1; i++)
-            opponents[i] = rand() % opponentRange + 1;
+
+        if(opponentRange > 900) {
+            if(opponentRange == 901)
+                opponents = [5];
+            if(opponentRange == 902)
+                opponents = [6]
+        }
+        else {
+            for(int i = 1; i < number + 1; i++)
+                opponents[i] = rand() % opponentRange + 1;
+        }
 
         battleMechanic(opponents);
         battleCount++;
