@@ -66,7 +66,7 @@ void plotCall(int battleCount) {
         break;
         case 10: forestsBeyond_pt3();
         break;
-        case 13: forestsBeyond_pt4();
+        case 13: forestsBeyond_pt4_boss();
         break;
     }
 }
@@ -183,7 +183,7 @@ void forestsBeyond_pt3() {
     cout<<"The rest of the day goes by in the tedious grind of fighting off monsters."<<endl;
 }
 
-void forestsBeyond_pt4() {
+void forestsBeyond_pt4_boss() {
     string pause;
     //to be done
 
@@ -194,4 +194,5 @@ void forestsBeyond_pt4() {
     cout<<"Verun suddenly takes point, bypassing Lain, who makes a sound of confusion."<<endl;
     cout<<"\"Quiet,\" Verun says in a barely audible whisper, taking his bow off his back and nocking an arrow in a quicksilver movement."<<endl;
     cout<<"A bit of indignation radiates from Lain, but only for a second before he takes a prepared stance as well."<<endl;
+    cout<<"From the area past the trees, a thick dark fog rolls in, splitting itself into streams that take the shape of a giant mouth."<<endl;
 }
