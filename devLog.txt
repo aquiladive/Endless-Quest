@@ -35,3 +35,4 @@ Future things:
 -> Add MP to monster attacks as well to restrict them, or would that be too complicated to set up?
 -> Add a fourth class for Monk? Maybe a fifth for Archer or some similar variant?
 -> Make exp for next level stored in protag (rather than calculated in levelUp), and display it in character status during battles?
+-> Create an inventory, have monsters drop items.
