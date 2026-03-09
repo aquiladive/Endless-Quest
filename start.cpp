@@ -215,8 +215,10 @@ void forestsBeyond_pt4_aftermath() {
     string pause;
     
     //to be done
-    cout<<"It was a long and tiring battle, perhaps the hardest of those you've encountered so far even though there were only two opponents."<<endl;
-    cout<<"Lain takes multiple hits to his abdomen, and while they don't break through the armor -- aided by the weaves of Asha's defensive magic -- the force has him crashing into a tree and falling unconscious."<<endl;
-    cout<<"Verun had managed to run just enough interference to keep Lain alive, while Sheila works on removing his internal injuries and bringing him back to the land of the living."<<endl;
-    cout<<"You're left to take the brunt of the conflict to buy time for all of them."<<endl;
+    cout<<"After the strange magics of the fog comes a terrifyingly large beast -- a boar, though mutated beyond simple recognition -- wreathed in a cloak of black sparks. They shimmer and crackle, sometimes so harshly that you can barely keep your eyes on it."<<endl;
+    cout<<"It made for a long and tiring battle, perhaps the hardest of those you've encountered so far even though there were only two opponents."<<endl;
+    cout<<"Lain takes multiple hits to his abdomen from the boar's tusks. While they don't break through the armor enchanted by the weaves of Asha's defensive magic, the force has him crashing into a tree and falling unconscious."<<endl;
+    cout<<"Verun had managed to run just enough interference to keep Lain alive, while Sheila worked on removing his internal injuries and bringing him back to the land of the living."<<endl;
+    cout<<"You were left to take the brunt of the conflict to buy time for all of them."<<endl;
+    cout<<"Your complaints would not be known to them, whispered in your heart, while you carried out your task to the fullest."<<endl;
 }
