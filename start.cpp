@@ -221,4 +221,5 @@ void forestsBeyond_pt4_aftermath() {
     cout<<"Verun had managed to run just enough interference to keep Lain alive, while Sheila worked on removing his internal injuries and bringing him back to the land of the living."<<endl;
     cout<<"You were left to take the brunt of the conflict to buy time for all of them."<<endl;
     cout<<"Your complaints would not be known to them, whispered in your heart, while you carried out your task to the fullest."<<endl;
+    cout<<"In the end you succeeded, and there were no casualties, though none of you were fit for another encounter and so decided to set up camp though the day was still young."<<endl;
 }
