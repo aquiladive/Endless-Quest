@@ -22,8 +22,8 @@ skill wa1 = {"Holy Shield", "Counter", 1, 8, "", {4, 2}, "The light protects you
 skill wb1 = {"Charge of Blood", "Boost", 2, 8, "", {3, 2}, "The heat of battle empowers you to strike harder."};
 skill wa2 = {"Divine Charge", "Attack 1", 1, 10, "", {5, 2}, "Light swells around and as you rush forward, it rushes with you- a blade honed with the force of the heavens."};
 skill wb2 = {"Desperate Dive", "BleedBoost", 2, 12, "", {3, 3}, "Your wounds bleed more but rather than dizziness, a great strength surges from your limbs."};
-skill wa3 = {"O Blessed Divine", "Attack 1", 1, 15, "", {3, 2}, "With the blessings of the divine upon you, you strike a fearsome blow that banishes evil."};
-skill wb3 = {"Hurricane Swing", "Attack All", 1, 12, "", {3, 2}, "With a cry, you rush into the thick of the battle and become a force of nature."};
+skill wa3 = {"O Blessed Divine", "Attack 1", 1, 15, "", {3, 3}, "With the blessings of the divine upon you, you strike a fearsome blow that banishes evil."};
+skill wb3 = {"Hurricane Swing", "Attack All", 1, 15, "", {3, 2}, "With a cry, you rush into the thick of the battle and become a force of nature."};
 
 skill m1 = {"Fireball", "Attack 1", 1, 5, "", {5, 1.5}, "A classic in every mage's repertoire."};
 skill m2 = {"Light Strike", "Attack 1", 1, 8, "Blind", {5, 1.5}, "You cradle light in your hands and target your opponent."};
@@ -40,3 +40,4 @@ skill ra1 = {"Bloodletting", "BleedBoost", 2, 8, "", {3, 2}, "You give up some o
 skill rb1 = {"Life Steal", "Drain", 1, 10, "", {3, 1.5}, "Your blade cuts your opponent and their life force is drawn to you."};
 skill ra2 = {"Giver to Shadows", "Attack All", 1, 12, "", {3, 1.5}, "You raise your hands and the shadows obey, lashing out like snakes."};
 skill rb2 = {"Fatal Sequence", "Attack 1", 1, 14, "Bleed", {3, 2}, "Your blade moves like the wind and repeatedly finds its target just as cuttingly."};
+skill ra3 = {"Judgement of the Eclipse", "Attack 1", 1, 15, "Blind", {3, 3}, "Beloved of the shadows that you are, you call upon the night and its ancient gods for death."};
