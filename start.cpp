@@ -215,7 +215,7 @@ void forestsBeyond_pt4_aftermath() {
     string pause;
     
     //to be done
-    cout<<"After the strange magics of the fog comes a terrifyingly large beast -- a boar, though mutated beyond simple recognition -- wreathed in a cloak of black sparks. They shimmer and crackle, sometimes so harshly that you can barely keep your eyes on it."<<endl;
+    cout<<"After the strange magics of the fog comes a terrifyingly large beast -- a boar, though mutated beyond easy recognition -- wreathed in a cloak of black sparks. The cloak shimmers and crackles, sometimes so harshly that you can barely keep your eyes on the beast."<<endl;
     cout<<"It made for a long and tiring battle, perhaps the hardest of those you've encountered so far even though there were only two opponents."<<endl;
     cout<<"Lain takes multiple hits to his abdomen from the boar's tusks. While they don't break through the armor enchanted by the weaves of Asha's defensive magic, the force has him crashing into a tree and falling unconscious."<<endl;
     cout<<"Verun had managed to run just enough interference to keep Lain alive, while Sheila worked on removing his internal injuries and bringing him back to the land of the living."<<endl;
@@ -223,4 +223,7 @@ void forestsBeyond_pt4_aftermath() {
     cout<<"Your complaints would not be known to them, whispered in your heart, while you carried out your task to the fullest."<<endl;
     cout<<"In the end you succeeded, and there were no casualties."<<endl;
     cout<<"That didn't exclude exhaustion and stress rendering all of you unfit for another encounter, so the decision was to set up camp though the day was still young."<<endl;
+    cout<<"\"I think we've done as much as we can be expected to and more,\" Sheila said into the quiet, her lips pursed tightly after."<<endl;
+    cout<<"Lain glances at you, mouthing \"urchontic\" at you. You shake your head."<<endl;
+    cout<<"You're curious, but you can understand limits. All of you have been through too much to go traipsing through the woods for yet another encounter that might be the equal, if not worse, of this one."<<endl;
 }
